@@ -15,4 +15,5 @@ enum TypeTechnology: int
     case type_dataScience = 9;
     case type_machineLearning = 10;
     case type_artificialIntelligence = 11;
+    case type_data = 12;
 }

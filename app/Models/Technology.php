@@ -5,7 +5,7 @@ namespace App\Models;
 use App\Enums\TypeTechnology;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 
@@ -18,11 +18,13 @@ class Technology extends Model
         'slug',
         'type',
         'icon',
+        'color'
     ];
 
-    public function technologyable(): MorphTo
+    public function employments(): MorphToMany
     {
-        return $this->morphTo();
+        
+        return $this->morphedByMany(Employment::class, 'technologyable');
     }
 
     protected function casts(): array

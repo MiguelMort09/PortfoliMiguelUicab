@@ -15,8 +15,8 @@ return new class extends Migration {
             $table->string('role');
             $table->string('company_name');
             $table->integer('status');
-            $table->dateTime('date_init');
-            $table->dateTime('date_finished');
+            $table->date('date_init');
+            $table->date('date_finished');
             $table->text('description');
             $table->timestamps();
             $table->softDeletes();

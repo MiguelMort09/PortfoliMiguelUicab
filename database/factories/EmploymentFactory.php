@@ -24,8 +24,8 @@ class EmploymentFactory extends Factory
             'date_init' => $this->faker->dateTimeBetween('-5 years', 'now'),
             'date_finished' => $this->faker->dateTimeBetween('now', '+5 years'), // Or null if ongoing
             'description' => $this->faker->paragraph,
-            'created_at' => now(),
-            'updated_at' => now(),
+            'created_at' => now()->format('Y-m-d'),
+            'updated_at' => now()->format('Y-m-d'),
         ];
     }
 }

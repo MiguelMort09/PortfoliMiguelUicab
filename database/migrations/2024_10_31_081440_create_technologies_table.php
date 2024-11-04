@@ -20,13 +20,11 @@ return new class extends Migration {
             $table->softDeletes();
         });
 
-        Schema::create('technology_technologyable', function (Blueprint $table) {
+        Schema::create('technologyables', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('technology_id')
-                ->constrained('technologies')
-                ->onDelete('cascade');
+            $table->integer('technology_id');
+            $table->integer('technologyable_id');
             $table->string('technologyable_type');
-            $table->foreignId('technologyable_id');
             $table->timestamps();
         });
     }
@@ -36,7 +34,7 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('technologies_technologyable');
+        Schema::dropIfExists('technologyables');
         Schema::dropIfExists('technologies');
     }
 };

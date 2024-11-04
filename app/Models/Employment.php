@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 
@@ -24,9 +24,9 @@ class Employment extends Model
         'description'
     ];
 
-    public function technologies(): MorphMany
+    public function technologies(): MorphToMany
     {
-        return $this->morphMany(Technology::class, 'technologyable');
+        return $this->morphToMany(Technology::class, 'technologyable');
     }
 
     public function skills(): BelongsToMany

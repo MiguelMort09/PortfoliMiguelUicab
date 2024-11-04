@@ -6,9 +6,11 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
     return Inertia::render('Welcome');
-});
+})->name('welcome');
 
 Route::resource('employments', \App\Http\Controllers\EmploymentController::class);
+Route::resource('projects', \App\Http\Controllers\ProjectController::class);
+Route::resource('technologies', \App\Http\Controllers\TechnologiesController::class);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

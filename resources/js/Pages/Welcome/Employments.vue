@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import TitleSection from "@/Components/TitleSection.vue";
-import { onMounted, ref } from "vue";
+import { onMounted, ref } from "vue"; // Definimos el estado reactivo para empleos
 
 // Definimos el estado reactivo para empleos
 const employments = ref([]);
@@ -22,13 +22,13 @@ onMounted(() => {
 </script>
 
 <template>
-    <section class="container-landing-page">
+    <section id="skills" class="basis-1/2 px-2">
         <TitleSection>Work Experience</TitleSection>
 
         <div v-for="(item, index) in employments" :key="index">
             <div class="relative flex divide-x divide-orange-400">
                 <div class="w-auto md:basis-1/3 text-right">
-                    <div class="items-center relative">
+                    <div class="flex items-start relative p-2">
                         <div class="pr-4 hidden md:block">
                             <p class="font-semibold text-gray-200">
                                 {{ item.companyName }}
@@ -56,21 +56,6 @@ onMounted(() => {
                     <p class="text-sm text-gray-300 mt-1 text-justify">
                         {{ item.description }}
                     </p>
-
-                    <div class="mt-2">
-                        <h5 class="font-semibold text-gray-200 text-sm">
-                            Skills:
-                        </h5>
-                        <div class="flex flex-wrap gap-2 mt-1">
-                            <span
-                                v-for="(skill, skillIndex) in item.skills"
-                                :key="skillIndex"
-                                class="bg-blue-800 text-blue-200 px-2 py-1 rounded-full text-xs"
-                            >
-                                {{ skill }}
-                            </span>
-                        </div>
-                    </div>
 
                     <div class="mt-2">
                         <h5 class="font-semibold text-gray-200 text-sm">

@@ -21,19 +21,6 @@ return new class extends Migration {
             $table->timestamps();
             $table->softDeletes();
         });
-
-        Schema::create('employment_skill', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('employment_id')
-                ->constrained('employments')
-                ->onDelete('cascade');
-            $table->foreignId('skill_id')
-                ->constrained('skills')
-                ->onDelete('cascade');
-            $table->timestamps();
-            $table->softDeletes();
-
-        });
     }
 
 

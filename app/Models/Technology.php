@@ -23,26 +23,17 @@ class Technology extends Model
 
     public function employments(): MorphToMany
     {
-        
+
         return $this->morphedByMany(Employment::class, 'technologyable');
     }
 
     protected function casts(): array
     {
         return [
-            'slug' => 'slug',
             'type' => TypeTechnology::class
         ];
     }
-
-    protected function name(): Attribute
-    {
-        return Attribute::make(
-            get: fn(string $value) => strtoupper($value),
-            set: fn(string $value) => strtolower($value),
-        );
-    }
-
+    
     protected function slug(): Attribute
     {
         return Attribute::make(

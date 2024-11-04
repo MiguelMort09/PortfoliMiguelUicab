@@ -16,6 +16,7 @@ return new class extends Migration {
             $table->string('resume');
             $table->string('git_url');
             $table->string('project_cover');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -1,5 +1,23 @@
 <script lang="ts" setup>
 import TitleSection from "@/Components/TitleSection.vue";
+import { onMounted, ref } from "vue";
+// Definimos el estado reactivo para empleos
+const technologies = ref([]);
+
+// Función para cargar los datos desde la API
+const loadTechnologies = async () => {
+    try {
+        const response = await axios.get("/technologies");
+        technologies.value = response.data;
+    } catch (error) {
+        console.error("Error al cargar los empleos:", error);
+    }
+};
+
+// Cargar los datos al montar el componente
+onMounted(() => {
+    loadTechnologies();
+});
 
 const icons = {
     alpinejs: "/assets/icons/alpinejs/alpinejs-original.svg",
@@ -65,27 +83,41 @@ const icons = {
 </script>
 
 <template>
-    <section class="container-landing-page">
-        <TitleSection>Work Experience</TitleSection>
-        <div
-            class="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 xl:grid-cols-12 gap-4"
-        >
+    <section id="skills" class="basis-1/2 px-2">
+        <TitleSection>Capabilities & Tools</TitleSection>
+        <div class="w-full">
             <div
-                v-for="(iconPath, iconName) in icons"
-                :key="iconName"
-                class="relative flex items-center justify-center"
+                v-for="(typeTech, index) in technologies"
+                :key="index"
+                class="w-full border-l border-red-600 pl-4 py-6 mb-4"
             >
-                <!-- Contenedor para sombra y degradado -->
-                <div
-                    class="absolute inset-1/2 bg-gradient-to-b from-transparent via-transparent to-red-600 rounded-lg"
-                ></div>
-
-                <!-- Ícono con sombra y borde redondeado -->
-                <img
-                    :alt="iconName + ' icon'"
-                    :src="iconPath"
-                    class="object-cover relative rounded-lg border border-red-100 p-3 shadow-lg shadow-red-600 transition-transform transform hover:scale-105"
-                />
+                <div class="relative flex items-center mb-2">
+                    <div
+                        class="w-4 h-4 rounded-full shadow-lg absolute -left-6 bg-red-500 shadow-amber-200"
+                    ></div>
+                    <h3 class="text-xl font-bold">
+                        {{ typeTech.type }}
+                    </h3>
+                </div>
+                <div class="grid grid-cols-4 md:grid-cols-6 gap-4">
+                    <div
+                        v-for="(tech, techIndex) in typeTech.technologies"
+                        :key="techIndex"
+                        class="flex flex-col justify-between"
+                    >
+                        <div class="flex-grow overflow-hidden">
+                            <img
+                                :alt="tech.name"
+                                :src="tech.icon"
+                                class="size-12 object-cover mb-2"
+                            />
+                            <h4
+                                class="text-xs text-wrap"
+                                v-text="tech.name"
+                            ></h4>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

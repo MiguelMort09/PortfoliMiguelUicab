@@ -11,6 +11,7 @@ import Toast from "primevue/toast";
 import ToastService from "primevue/toastservice";
 import { ZiggyVue } from "../../vendor/tightenco/ziggy";
 import Timeline from "primevue/timeline";
+import Card from "primevue/card";
 
 const appName = import.meta.env.VITE_APP_NAME || "Laravel";
 
@@ -31,6 +32,7 @@ createInertiaApp({
             .component("Textarea", Textarea)
             .component("Timeline", Timeline)
             .component("Toast", Toast)
+            .component("Card", Card)
             .mount(el);
     },
     progress: {

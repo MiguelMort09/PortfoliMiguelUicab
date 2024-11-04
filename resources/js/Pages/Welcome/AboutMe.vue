@@ -5,21 +5,11 @@ const profileImageUrl = "/assets/images/IMG_6430.PNG";
 </script>
 
 <template>
-    <section class="container-landing-page">
-        <TitleSection> Hi, I'm Miguel (Mort for the friends)</TitleSection>
-        <h3
-            class="text-lg md:text-2xl font-semibold font-mono text-neutral-200 mb-4"
-        >
-            Software Developer
-        </h3>
+    <section id="about" class="container-landing-page">
+        <TitleSection>About Me</TitleSection>
 
         <div class="md:flex md:space-x-16 space-y-4">
-            <div class="md:basis-2/3">
-                <h2
-                    class="text-xl md:text-4xl font-bold text-red-500 font-mono mb-2"
-                >
-                    But, Who is Miguel Uicab?
-                </h2>
+            <div class="md:basis-2/3 content-center">
                 <p
                     class="text-neutral-300 leading-relaxed md:text-lg text-justify"
                 >

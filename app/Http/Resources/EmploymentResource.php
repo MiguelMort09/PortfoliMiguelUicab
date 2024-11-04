@@ -14,7 +14,6 @@ class EmploymentResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        $skills = $this->skills->pluck(['name']);
         $technologies = $this->technologies->select(["name", "icon"]);
 
         return [
@@ -24,7 +23,6 @@ class EmploymentResource extends JsonResource
             'dates' => $this->date_init . ($this->date_finished ? ' - ' . $this->date_finished : 'Actualmente'),
             'description' => $this->description,
             'technologies' => $technologies,
-            'skills' => $skills
         ];
     }
 }

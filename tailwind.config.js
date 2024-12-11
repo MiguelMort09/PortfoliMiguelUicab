@@ -1,4 +1,5 @@
 import forms from "@tailwindcss/forms";
+import animations from "@midudev/tailwind-animations";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -14,8 +15,11 @@ export default {
             fontFamily: {
                 sans: ["Inter", "sans-serif"],
             },
+            colors: {
+                "bg-red-mort": "rgba(255, 0, 0, 0.7)",
+            },
         },
     },
 
-    plugins: [forms],
+    plugins: [animations, forms],
 };

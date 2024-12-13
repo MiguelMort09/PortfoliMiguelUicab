@@ -17,6 +17,7 @@ class TechnologiesController extends Controller
                     'type' => __(TypeTechnology::tryFrom($type)->name),
                     'technologies' => TechnologiesResource::collection($items)
                 ])
+                ->sortByDesc(fn($group) => count($group['technologies']))
                 ->values()
                 ->jsonSerialize()
         );

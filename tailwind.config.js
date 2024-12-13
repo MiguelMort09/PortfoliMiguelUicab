@@ -1,25 +1,22 @@
-import forms from "@tailwindcss/forms";
-import animations from "@midudev/tailwind-animations";
+import defaultTheme from 'tailwindcss/defaultTheme';
+import forms from '@tailwindcss/forms';
 
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
-        "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
-        "./storage/framework/views/*.php",
-        "./resources/views/**/*.blade.php",
-        "./resources/js/**/*.vue",
+        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+        './storage/framework/views/*.php',
+        './resources/views/**/*.blade.php',
+        './resources/js/**/*.vue',
     ],
 
     theme: {
         extend: {
             fontFamily: {
-                sans: ["Inter", "sans-serif"],
-            },
-            colors: {
-                "bg-red-mort": "rgba(255, 0, 0, 0.7)",
+                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
         },
     },
 
-    plugins: [animations, forms],
+    plugins: [forms],
 };

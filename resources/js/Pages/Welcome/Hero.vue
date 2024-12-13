@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { onMounted, ref } from "vue";
+import {onMounted, ref} from "vue";
 
 const roles = [
     "Software Developer",
@@ -33,34 +33,48 @@ onMounted(() => typeEffect());
 </script>
 
 <template>
-    <div class="relative h-screen bg-black flex justify-center items-center">
+    <div
+        class="relative py-12 min-h-screen lg:h-screen bg-gradient-to-b from-black via-slate-900 to-black flex justify-center items-center">
         <!-- Background Image -->
         <img
             :src="backgroundPolygon"
             alt="Background"
-            class="absolute inset-0 h-full w-full object-cover opacity-20"
+            class="absolute inset-0 h-full w-full object-cover opacity-30"
         />
 
-        <!-- Hero Text -->
-        <div class="relative z-20 text-center px-4">
-            <!-- Metallic Gradient for Name -->
-            <h1 class="font-extrabold text-6xl lg:text-8xl text-white mb-8">
+        <!-- Overlay Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black opacity-90"></div>
+
+        <!-- Hero Content -->
+        <div class="relative z-20 max-w-5xl mx-auto px-6 text-center">
+            <!-- Profile Image -->
+            <div class="mb-6 justify-items-center">
+                <img
+                    alt="Profile Picture"
+                    class="w-40 h-40 lg:w-48 lg:h-48 rounded-full border-4 border-gray-300 shadow-lg"
+                    src="/assets/images/IMG_2921.jpg"
+                />
+            </div>
+
+            <!-- Name -->
+            <h1 class="font-extrabold text-2xl sm:text-4xl lg:text-6xl text-white mb-4 tracking-wide">
                 MIGUEL UICAB
             </h1>
-            <!-- Typing Effect for Roles -->
-            <h2
-                class="font-semibold text-2xl lg:text-4xl text-red-600 tracking-wide mb-12"
-            >
-                {{ currentRole }}
-                <span class="blinking-cursor">|</span>
-            </h2>
 
-            <blockquote class="md:text-xl text-white italic border-red-500">
-                "Simplicity is key; true progress is not measured by effort, but
-                by finding the most efficient way to achieve it."
+            <!-- Description -->
+            <p class="font-medium sm:text-lg lg:text-xl text-gray-300 mb-6 leading-relaxed">
+                Desarrollador Full Stack con 4 años de experiencia. Ingeniero en Tecnologías de Software, especializado
+                en el desarrollo de aplicaciones web con PHP y Laravel.
+            </p>
+
+            <!-- Quote -->
+            <blockquote class="sm:text-lg lg:text-2xl text-gray-200 italic border-l-4 border-red-500 pl-4">
+                "Simplicity is key; true progress is not measured by effort, but by finding the most efficient way to
+                achieve it."
             </blockquote>
         </div>
     </div>
+
 </template>
 
 <style scoped>

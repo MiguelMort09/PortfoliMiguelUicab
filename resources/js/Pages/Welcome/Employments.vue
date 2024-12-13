@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import TitleSection from "@/Components/TitleSection.vue";
-import { onMounted, ref } from "vue"; // Definimos el estado reactivo para empleos
+import {onMounted, ref} from "vue"; // Definimos el estado reactivo para empleos
 
 // Definimos el estado reactivo para empleos
 const employments = ref([]);
@@ -22,58 +22,43 @@ onMounted(() => {
 </script>
 
 <template>
-    <section id="skills" class="basis-1/2 px-2">
-        <TitleSection>Work Experience</TitleSection>
+    <section id="skills" class="w-full px-4 mx-auto lg:max-w-6xl content-center">
+        <TitleSection>Experiencia Laboral</TitleSection>
 
         <div v-for="(item, index) in employments" :key="index">
             <div class="relative flex divide-x divide-orange-400">
-                <div class="w-auto md:basis-1/3 text-right">
-                    <div class="flex items-start relative p-2">
-                        <div class="pr-4 hidden md:block">
-                            <p class="font-semibold text-gray-200">
+                <div class="md:basis-1/3 text-right">
+                    <div class="flex items-end relative p-2">
+                        <div class="pr-4 hidden md:block md:w-full">
+                            <h4 class="text-xl uppercase font-semibold text-red-700">
+                                {{ item.jobTitle }}
+                            </h4>
+                            <p class="text-sm text-gray-400">
                                 {{ item.companyName }}
                             </p>
                             <p class="text-sm text-gray-400">
                                 {{ item.dates }}
                             </p>
                         </div>
-                        <div
-                            class="w-4 h-4 rounded-full shadow-lg absolute -right-2 bg-red-500 shadow-amber-200"
-                        ></div>
+                        <div class="w-4 h-4 rounded-full shadow-lg absolute -right-2 bg-red-500 shadow-amber-200">
+                        </div>
                     </div>
                 </div>
 
-                <div class="flex-1 md:basis-2/3 pl-4">
-                    <p class="font-semibold text-gray-200 md:hidden">
-                        {{ item.companyName }}
-                    </p>
-                    <h4 class="text-lg font-semibold text-white">
+                <div class="flex-1 md:basis-2/3 pl-8 pb-8">
+                    <h4 class="text-xl uppercase font-semibold text-white md:hidden">
                         {{ item.jobTitle }}
                     </h4>
                     <p class="text-sm text-gray-400 md:hidden">
-                        {{ item.dates }}
+                        {{ item.companyName }} | {{ item.dates }}
                     </p>
-                    <p class="text-sm text-gray-300 mt-1 text-justify">
+                    <p class="text-gray-300 mt-1 text-justify text-lg line-clamp-4">
                         {{ item.description }}
                     </p>
-
-                    <div class="mt-2">
-                        <h5 class="font-semibold text-gray-200 text-sm">
-                            Technologies:
-                        </h5>
-                        <div class="flex flex-wrap gap-2 py-2">
-                            <span
-                                v-for="(tech, techIndex) in item.technologies"
-                                :key="techIndex"
-                                class="rounded-full text-xs"
-                            >
-                                <img
-                                    :src="tech.icon"
-                                    alt="tech.name"
-                                    class="size-8 object-cover"
-                                />
-                            </span>
-                        </div>
+                    <div class="w-full text-right">
+                        <a>
+                            Ver más...
+                        </a>
                     </div>
                 </div>
             </div>

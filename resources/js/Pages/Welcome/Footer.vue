@@ -4,14 +4,13 @@ const linkedin = "/assets/icons/linkedin/linkedin-original.svg";
 </script>
 
 <template>
-    <footer class="bg-black w-full">
+    <footer class="bg-black w-full  border-t-4 border-slate-900">
         <div class="container-landing-page py-10">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div>
                     <h3 class="text-2xl font-bold">Miguel's Portfolio</h3>
                     <p class="text-justify mt-4">
-                        Thank you for visiting my personal portfolio website.
-                        Connect with me over socials.
+                        Thank you for visiting my personal portfolio website. Connect with me over socials.
                     </p>
                 </div>
                 <div class="text-right">

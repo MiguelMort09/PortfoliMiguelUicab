@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import TitleSection from "@/Components/TitleSection.vue";
-import { onMounted, ref } from "vue";
+import {onMounted, ref} from "vue";
 
 const statusPage = true;
 
@@ -27,8 +27,7 @@ onMounted(() => {
         <div
             class="border border-red-600 text-red-600 text-center rounded-lg font-bold px-4 py-1"
         >
-            El portfolio aun está en construcción pronto verá más proyectos en
-            esta sección
+            El portfolio aun está en construcción pronto verá más proyectos en esta sección
         </div>
         <div v-show="projects.length > 0" class="grid grid-cols-2 gap-8">
             <div v-for="(item, index) in projects" :key="index">
@@ -38,14 +37,11 @@ onMounted(() => {
                     >
                         <div class="flex gap-4 items-center">
                             <div
-                                class="p-2 rounded-md text-white font-bold text-lg group-hover:bg-red-600 transition-colors border border-red-600"
-                            >
+                                class="p-2 rounded-md text-white font-bold text-lg group-hover:bg-red-600 transition-colors border border-red-600">
                                 &lt;/&gt;
                             </div>
                             <div>
-                                <h4
-                                    class="group-hover:text-red-500 transition-colors text-lg font-bold"
-                                >
+                                <h4 class="group-hover:text-red-500 transition-colors text-lg font-bold">
                                     {{ item.name }}
                                 </h4>
                                 <div>

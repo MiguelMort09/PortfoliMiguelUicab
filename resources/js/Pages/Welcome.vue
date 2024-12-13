@@ -1,25 +1,25 @@
 <script lang="ts" setup>
-import { Head } from "@inertiajs/vue3";
+import {Head} from "@inertiajs/vue3";
 import Hero from "@/Pages/Welcome/Hero.vue";
 import AboutMe from "@/Pages/Welcome/AboutMe.vue";
 import Employments from "@/Pages/Welcome/Employments.vue";
-import Projects from "@/Pages/Welcome/Projects.vue";
-import Contact from "@/Pages/Welcome/Contact.vue";
 import Skills from "@/Pages/Welcome/Skills.vue";
 import GuestLayout from "@/Layouts/GuestLayout.vue";
 </script>
 
 <template>
-    <Head title="Welcome" />
+    <Head title="Welcome"/>
     <GuestLayout>
-        <Hero />
-        <AboutMe />
-        <div class="container-landing-page md:flex gap-8">
-            <Employments />
-            <Skills />
-        </div>
-        <Projects />
-        <Contact />
+        <Hero/>
+        <section class="py-20">
+            <Employments/>
+        </section>
+        <section class="py-10">
+            <AboutMe/>
+        </section>
+        <section class="py-10">
+            <Skills/>
+        </section>
     </GuestLayout>
 </template>
 

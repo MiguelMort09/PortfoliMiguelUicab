@@ -4,11 +4,11 @@ import Footer from "@/Pages/Welcome/Footer.vue";
 </script>
 
 <template>
-    <div class="relative min-h-screen w-full text-white bg-neutral-950">
-        <Navigation />
+    <div class="relative min-h-screen w-full text-white bg-black">
+        <Navigation/>
         <main>
-            <slot />
+            <slot/>
         </main>
-        <Footer />
+        <Footer/>
     </div>
 </template>

@@ -2,8 +2,6 @@
 import {Head} from "@inertiajs/vue3";
 import Hero from "@/Pages/Welcome/Hero.vue";
 import AboutMe from "@/Pages/Welcome/AboutMe.vue";
-import Employments from "@/Pages/Welcome/Employments.vue";
-import Skills from "@/Pages/Welcome/Skills.vue";
 import GuestLayout from "@/Layouts/GuestLayout.vue";
 </script>
 
@@ -12,13 +10,13 @@ import GuestLayout from "@/Layouts/GuestLayout.vue";
     <GuestLayout>
         <Hero/>
         <section class="py-20">
-            <Employments/>
+
         </section>
         <section class="py-10">
             <AboutMe/>
         </section>
         <section class="py-10">
-            <Skills/>
+            clea
         </section>
     </GuestLayout>
 </template>

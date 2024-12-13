@@ -1,1 +1,0 @@
-import{T as t}from"./TitleSection-CBHw1lmm.js";import{D as o,o as a,f as s,a as n,w as r,d as c}from"./app-CCVeHdlT.js";import"./_plugin-vue_export-helper-DlAUqK2U.js";const i={class:"container-landing-page"},f=o({__name:"Projects",setup(l){return(p,e)=>(a(),s("section",i,[n(t,null,{default:r(()=>e[0]||(e[0]=[c("Projects")])),_:1})]))}});export{f as default};

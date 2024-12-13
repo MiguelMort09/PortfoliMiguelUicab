@@ -1,1 +1,0 @@
-import{T as e}from"./TitleSection-CBHw1lmm.js";import{D as o,o as a,f as n,a as s,w as r,d as c}from"./app-CCVeHdlT.js";import"./_plugin-vue_export-helper-DlAUqK2U.js";const i={class:"container-landing-page"},f=o({__name:"Contact",setup(l){return(p,t)=>(a(),n("section",i,[s(e,null,{default:r(()=>t[0]||(t[0]=[c("Contact Me")])),_:1})]))}});export{f as default};

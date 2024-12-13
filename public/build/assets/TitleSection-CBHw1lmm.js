@@ -1,1 +1,0 @@
-import{_ as e}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{o,f as r,r as n}from"./app-CCVeHdlT.js";const s={},c={class:"text-xl md:text-4xl font-bold text-red-500 font-mono mb-2"};function l(t,a){return o(),r("h2",c,[n(t.$slots,"default")])}const m=e(s,[["render",l]]);export{m as T};

@@ -16,7 +16,6 @@ import GuestLayout from "@/Layouts/GuestLayout.vue";
             <AboutMe/>
         </section>
         <section class="py-10">
-            clea
         </section>
     </GuestLayout>
 </template>

@@ -39,7 +39,7 @@ onMounted(() => typeEffect());
         <img
             :src="backgroundPolygon"
             alt="Background"
-            class="absolute inset-0 h-full w-full object-cover opacity-30"
+            class="absolute inset-0 h-full w-full object-cover opacity-30 justify-items-center"
         />
 
         <!-- Overlay Gradient -->

@@ -40,12 +40,8 @@ onMounted(() => typeEffect());
             alt="Background"
             class="absolute inset-0 h-full w-full object-cover opacity-30 justify-items-center"
         />
-
-        <!-- Overlay Gradient -->
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black opacity-90"></div>
-
         <!-- Hero Content -->
-        <div class="relative z-20 max-w-5xl mx-auto px-6 text-center">
+        <div class="relative z-20 inset-0 content-center">
             <!-- Profile Image -->
             <div class="w-full mb-6 justify-items-center">
                 <img
@@ -54,23 +50,26 @@ onMounted(() => typeEffect());
                     src="/assets/images/IMG_2921.jpg"
                 />
             </div>
+            <div class="sm:px-10 md:max-w-5xl mx-auto px-6 ">
+                <!-- Name -->
+                <h1 class="font-extrabold text-2xl sm:text-4xl lg:text-6xl text-white mb-4 tracking-wide">
+                    MIGUEL UICAB
+                </h1>
 
-            <!-- Name -->
-            <h1 class="font-extrabold text-2xl sm:text-4xl lg:text-6xl text-white mb-4 tracking-wide">
-                MIGUEL UICAB
-            </h1>
+                <!-- Description -->
+                <p class="font-medium sm:text-lg lg:text-xl text-gray-300 mb-6 leading-relaxed">
+                    Desarrollador Full Stack con 4 años de experiencia. Ingeniero en Tecnologías de Software,
+                    especializado
+                    en el desarrollo de aplicaciones web con PHP y Laravel.
+                </p>
 
-            <!-- Description -->
-            <p class="font-medium sm:text-lg lg:text-xl text-gray-300 mb-6 leading-relaxed">
-                Desarrollador Full Stack con 4 años de experiencia. Ingeniero en Tecnologías de Software, especializado
-                en el desarrollo de aplicaciones web con PHP y Laravel.
-            </p>
-
-            <!-- Quote -->
-            <blockquote class="sm:text-lg lg:text-2xl text-gray-200 italic border-l-4 border-red-500 pl-4">
-                "Simplicity is key; true progress is not measured by effort, but by finding the most efficient way to
-                achieve it."
-            </blockquote>
+                <!-- Quote -->
+                <blockquote class="sm:text-lg lg:text-2xl text-gray-200 italic border-l-4 border-red-500 pl-4">
+                    "Simplicity is key; true progress is not measured by effort, but by finding the most efficient way
+                    to
+                    achieve it."
+                </blockquote>
+            </div>
         </div>
     </div>
 

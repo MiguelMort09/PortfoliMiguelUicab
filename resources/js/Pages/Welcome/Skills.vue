@@ -41,12 +41,12 @@ onMounted(() => {
 
         <div class="w-full mt-8  text-center p-6">
             <div v-if="selectedTech !== null">
-                <ul class="w-full flex flex-wrap justify-center gap-6 transition-all ease-in-out duration-300 delay-300	">
+                <ul class="w-full flex flex-wrap justify-center gap-6 transition-all ease-in-out duration-300 delay-300">
                     <li v-for="(skill, idx) in selectedTech.technologies"
                         :key="idx"
                         class="text-center w-12 md:w-20"
                     >
-                        <div class="w-full justify-items-center">
+                        <div class="w-full flex flex-col justify-center items-center">
                             <img
                                 :alt="skill.name"
                                 :src="skill.icon"

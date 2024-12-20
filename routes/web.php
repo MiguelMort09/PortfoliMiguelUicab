@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\EmploymentController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TechnologiesController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -8,8 +10,9 @@ Route::get('/', function () {
     return Inertia::render('Welcome');
 })->name('welcome');
 
-Route::resource('employments', \App\Http\Controllers\EmploymentController::class)->names('employments');
-Route::resource('technologies', \App\Http\Controllers\TechnologiesController::class)->names('technologies');
+Route::get('/employments', [EmploymentController::class, 'index'])->name('employments.index');
+
+Route::get('technologies', [TechnologiesController::class, 'index'])->name('technologies.index');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

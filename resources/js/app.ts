@@ -13,8 +13,6 @@ import {ZiggyVue} from "../../vendor/tightenco/ziggy";
 import Timeline from "primevue/timeline";
 import Card from "primevue/card";
 
-const appName = import.meta.env.VITE_APP_NAME || "Laravel";
-
 createInertiaApp({
     resolve: (name) =>
         resolvePageComponent(

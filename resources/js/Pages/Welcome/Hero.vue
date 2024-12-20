@@ -43,7 +43,7 @@ onMounted(() => typeEffect());
 
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black"></div>
 
-        <div class="relative z-20 w-full md:min-h-screen">
+        <div class="relative z-20 w-full md:min-h-screen md:content-center">
             <div class="w-full flex justify-center mb-16">
                 <img
                     alt="Profile Picture"

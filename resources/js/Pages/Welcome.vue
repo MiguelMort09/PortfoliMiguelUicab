@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import {Head} from "@inertiajs/vue3";
 import Hero from "@/Pages/Welcome/Hero.vue";
 import AboutMe from "@/Pages/Welcome/AboutMe.vue";
 import Skills from "@/Pages/Welcome/Skills.vue";
@@ -7,6 +8,7 @@ import GuestLayout from "@/Layouts/GuestLayout.vue";
 </script>
 
 <template>
+    <Head title="Inicio"/>
     <GuestLayout>
         <Hero/>
         <section class="py-20">

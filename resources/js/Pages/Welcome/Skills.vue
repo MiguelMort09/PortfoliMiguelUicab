@@ -50,7 +50,7 @@ onMounted(() => {
                             <img
                                 :alt="skill.name"
                                 :src="skill.icon"
-                                class="w-12 md:w-20 p-3 object-cover rounded-full shadow-lg border border-gray-600 bg-gradient-to-b from-slate-900 via-black to-slate-900 transition-transform transform hover:scale-110 duration-300"
+                                class="w-12 md:w-20 p-1 sm:p-2 lg:p-3 object-cover rounded-full shadow-lg border border-gray-600 bg-gradient-to-b from-slate-900 via-black to-slate-900 transition-transform transform hover:scale-110 duration-300"
                             />
 
                             <h4 class="mt-4 text-sm font-medium text-gray-300 transition-colors duration-300">

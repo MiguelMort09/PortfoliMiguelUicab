@@ -6,7 +6,7 @@ const profileImageUrl = "/assets/images/IMG_6430.PNG";
 
 <template>
     <section id="about" class="w-full px-4 mx-auto lg:max-w-6xl content-center">
-        <TitleSection>Sobre Mi</TitleSection>
+        <TitleSection>Sobre Mí</TitleSection>
 
         <div class="md:flex md:space-x-16 space-y-4 md:space-y-0 content-center">
             <!-- Text Content -->

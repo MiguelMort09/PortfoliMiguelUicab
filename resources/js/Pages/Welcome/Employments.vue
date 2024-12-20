@@ -22,7 +22,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <section id="skills" class="w-full px-4 mx-auto lg:max-w-6xl content-center">
+    <section id="employments" class="w-full px-4 mx-auto lg:max-w-6xl content-center">
         <TitleSection>Experiencia Laboral</TitleSection>
 
         <div v-for="(item, index) in employments" :key="index">

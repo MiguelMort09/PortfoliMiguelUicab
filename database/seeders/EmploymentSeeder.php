@@ -17,7 +17,7 @@ class EmploymentSeeder extends Seeder
         $employment1 = Employment::create([
             'company_name' => 'ONIXT ROBOTICS',
             'role' => 'Web Developer Jr',
-            'description' => 'En Onixt Robótica, mi primer empleo formal como programador, enfrenté diversos desafíos que no solo influyeron en mi desarrollo profesional, sino también en mi crecimiento personal. Este período me ayudó a mejorar mi toma de decisiones, a aprender a generar requerimientos y a gestionar mi trabajo de manera autónoma. Además, tuve que enfrentar el control de emociones en el entorno laboral debido a mi falta de experiencia en las tecnologías y en el desarrollo de software.',
+            'description' => 'Desarrollé y desplegué aplicaciones web utilizando Laravel, abarcando desde la planificación detallada del desarrollo hasta la toma de requerimientos. Adicionalmente, impartí cursos de principios de programación a niños y adolescentes durante los fines de semana.',
             'date_init' => '2021-01-21',
             'date_finished' => '2021-07-21',
             'status' => StatusJob::CompletedJob
@@ -27,7 +27,7 @@ class EmploymentSeeder extends Seeder
         $employment2 = Employment::create([
             'company_name' => 'Grupo Icarus S.A. de C.V',
             'role' => 'Desarrollador full stack',
-            'description' => 'Durante mi tiempo en Grupo Icarus, además de consolidar mis conocimientos previos en PHP, Laravel, base de datos relacionales y no relacionales, Java Script, tuve la oportunidad de adquirir nuevas habilidades y conocimientos en la administración de servidores y el mantenimiento de plataformas. Gracias al reconocimiento de mis superiores y a la confianza depositada en mí, pude desempeñar roles de administrador en solitario o colaborar en diversos proyectos. Mis responsabilidades abarcaron desde apoyar en estimaciones y participar en reuniones con clientes hasta la planificación de proyectos. En el aspecto técnico, trabajé con nuevas tecnologías como Jaspers Reports, servicios de facturación y pasarelas de pago. Esta experiencia no solo contribuyó a mi crecimiento profesional, sino también personal, al influir en mis habilidades y valores.',
+            'description' => 'Desarrollé aplicaciones web a medida en PHP (legacy y modernas), implementando pasarelas de pago, facturación electrónica mediante API y reportes con JasperReports. Participé en la toma de requerimientos, planificación y desarrollo de user stories con SCRUM. Optimicé sistemas con lógica de negocio, dockerización de entornos y refactorización de procesos. También gestioné y resolví tickets de clientes, asegurando la mejora continua de los proyectos.',
             'date_init' => '2022-07-18',
             'date_finished' => '2023-11-15',
             'status' => StatusJob::CompletedJob
@@ -37,12 +37,22 @@ class EmploymentSeeder extends Seeder
         $employment3 = Employment::create([
             'company_name' => 'Junkyard México',
             'role' => 'Desarrollador Laravel',
-            'description' => 'Durante mi tiempo en Junkyar, tuve mi primer empleo remoto, lo cual significó una experiencia enriquecedora al trabajar con personas de diversas nacionalidades. Aunque inicialmente la comunicación presentó un desafío, con el tiempo logramos superarlo. Trabajar con tecnologías conocidas fue beneficioso, ya que pude expandir mis conocimientos. El proyecto en el que colaboré fue de gran envergadura, lo que también supuso un desafío adicional.',
-            'date_init' => '2023-11-16',
-            'date_finished' => '2024-02-28',
+            'description' => 'Participé en el desarrollo de una aplicación CMDB utilizando Laravel, integrando tecnologías como Docker, APIs REST y MySQL. Colaboré en la migración del sistema en producción a su nueva versión, asegurando la compatibilidad y continuidad operativa. Este proyecto presentó el desafío de trabajar con un equipo multicultural, utilizando herramientas como Azure DevOps y Slack, siendo mi primer empleo con una empresa de Estados Unidos, lo que fortaleció mis habilidades técnicas y de colaboración internacional.',
+            'date_init' => '2023-11-27',
+            'date_finished' => '2024-02-29',
             'status' => StatusJob::CompletedJob
         ]);
         $employment3->technologies()->attach([1, 3, 5, 6, 7, 9, 11, 13, 14, 15, 17, 19, 20, 21, 27, 31, 34,]);
+
+        $employment4 = Employment::create([
+            'company_name' => 'Sahuro Consulting',
+            'role' => 'Desarrollador Full Stack',
+            'description' => 'Brindé consultoría en el desarrollo de aplicaciones web con servicios API REST para una empresa multinacional, utilizando herramientas como Azure DevOps para la gestión de proyectos bajo la metodología Scrum. Participé en la administración de servicios de intranet, integración con SAP y desarrollo de una aplicación móvil en Apache Cordova que se comunicaba con nuestro backend, garantizando una solución integral y eficiente para las necesidades del cliente.',
+            'date_init' => '2023-11-20',
+            'date_finished' => '2024-03-31',
+            'status' => StatusJob::CompletedJob
+        ]);
+        $employment4->technologies()->attach([4, 5, 6, 7, 11, 14, 17, 25, 27, 31]);
 
     }
 }

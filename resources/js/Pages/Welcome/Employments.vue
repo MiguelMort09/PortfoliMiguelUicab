@@ -52,14 +52,9 @@ onMounted(() => {
                     <p class="text-sm text-gray-400 md:hidden">
                         {{ item.companyName }} | {{ item.dates }}
                     </p>
-                    <p class="text-gray-300 mt-1 text-justify text-lg line-clamp-4">
+                    <p class="text-gray-300 mt-1 text-justify text-lg">
                         {{ item.description }}
                     </p>
-                    <div class="w-full text-right">
-                        <a>
-                            Ver más...
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>

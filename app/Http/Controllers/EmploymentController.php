@@ -12,7 +12,7 @@ class EmploymentController extends Controller
      */
     public function index()
     {
-        return EmploymentResource::collection(Employment::all()->sortByDesc("date_init"))->jsonSerialize();
+        return EmploymentResource::collection(Employment::all()->sortByDesc("date_finished"))->jsonSerialize();
     }
 
 

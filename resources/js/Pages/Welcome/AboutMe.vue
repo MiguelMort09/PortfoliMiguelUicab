@@ -13,18 +13,20 @@ const profileImageUrl = "/assets/images/IMG_6430.PNG";
             <div
                 class="md:basis-2/3 space-y-4 text-neutral-300 leading-relaxed rounded-md ">
                 <p class="md:text-xl text-justify">
-                    ¡Hola! Soy Miguel Uicab, pero para los amigos, simplemente <em>Mort</em>. Tengo 24 años y una
-                    gran pasión por la tecnología. También me interesa la filantropía y el servicio público, con el
-                    sueño de convertirme en un empresario exitoso. Ser extrovertido me ha ayudado a conectar con
-                    gente increíble en todos lados: trabajo, viajes, cursos y reuniones.
+                    ¡Hola! Soy Miguel Uicab, aunque todos me llaman <em>Mort</em>. Tengo 24 años y una gran pasión por
+                    la tecnología. Tengo intereses filantropicos así como en el servicio público, con el propósito de
+                    convertirme en un empresario exitoso. Soy extrovertido, lo que me ha permitido conectar con gente
+                    increíble en diversos ámbitos: trabajo, viajes, cursos, reuniones, etc.
                 </p>
                 <p class="md:text-lg text-justify">
-                    Mis pasatiempos incluyen la F1 y el boxeo. Aunque parecen deportes individuales, cada victoria
-                    depende de un equipo. Para mí, el éxito se logra mejor en equipo. En mi tiempo libre, disfruto
-                    de ver películas, leer y pasar tiempo de calidad con mis amigos. Gracias a mentores y errores en
-                    el camino, he aprendido mucho. Profesionalmente, me enfoco en soluciones eficientes y rápidas,
-                    siempre manteniendo buenas prácticas y calidad.
+                    En mi tiempo libre, disfruto pasar tiempo con amigos, ver películas, escuchar música, leer, meditar
+                    y buscar mi crecimiento personal. Mis deportes favoritos son la F1 y el boxeo, que, aunque parecen
+                    individuales, dependen de un equipo para lograr el éxito. Creo firmemente que "el éxito se logra
+                    mejor en equipo". Mis experiencias y errores me han ayudado a crecer tanto personal como
+                    profesionalmente. Lo cual me ha ayudado a tener un enfoque en soluciones rápidas y eficientes,
+                    manteniendo las buenas prácticas y calidad.
                 </p>
+
             </div>
 
             <!-- Image -->

@@ -54,6 +54,11 @@ class Employment extends Model
     protected function description(): Attribute
     {
         return Attribute::make(
+            get: fn(string $value) => preg_replace_callback(
+                '/([.?!]\s*)([a-z])/',
+                fn($matches) => $matches[1] . strtoupper($matches[2]),
+                ucfirst(strtolower($value)) // Convierte a minúsculas todo y luego capitaliza la primera letra
+            ),
             set: fn(string $value) => Str::lower($value)
         );
     }

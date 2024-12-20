@@ -34,7 +34,7 @@ onMounted(() => typeEffect());
 
 <template>
     <div
-        class="relative py-12 min-h-screen lg:h-screen bg-gradient-to-b from-black via-slate-900 to-black flex justify-center items-center">
+        class="relative py-12 min-h-screen bg-gradient-to-b from-black via-slate-900 to-black flex flex-col justify-center items-center">
         <!-- Background Image -->
         <img
             :src="backgroundPolygon"

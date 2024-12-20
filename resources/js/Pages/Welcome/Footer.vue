@@ -8,13 +8,17 @@ const linkedin = "/assets/icons/linkedin/linkedin-original.svg";
         <div class="container-landing-page py-10">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div>
-                    <h3 class="text-2xl font-bold">Miguel's Portfolio</h3>
+                    <h3 class="text-2xl font-bold">
+                        Mi Portafolio DEV
+                    </h3>
                     <p class="text-justify mt-4">
-                        Thank you for visiting my personal portfolio website. Connect with me over socials.
+                        Gracias por visitar mi sitio web de portafolio personal. Conéctate conmigo a través de las redes
+                        sociales.
                     </p>
                 </div>
                 <div class="text-right">
-                    <h3 class="text-2xl font-bold">Contact Info</h3>
+                    <h3 class="text-2xl font-bold">
+                        Información de Contacto</h3>
                     <div class="space-y-2 mt-4">
                         <p>+52 982 102 9769</p>
                         <p>devmigueluicab@gmail.com</p>
@@ -43,17 +47,7 @@ const linkedin = "/assets/icons/linkedin/linkedin-original.svg";
                                     class="size-6 rounded-full object-cover"
                                 />
                             </a>
-                            <a
-                                href="https://github.com/MiguelMort09"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                            >
-                                <img
-                                    :src="githubSVG"
-                                    alt="GitHub"
-                                    class="size-6 object-cover"
-                                />
-                            </a>
+
                         </div>
                     </div>
                 </div>

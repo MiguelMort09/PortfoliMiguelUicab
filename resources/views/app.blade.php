@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title inertia>{{  config('app.name', 'Miguel Mort - Desarrollo Web y Soluciones TI')  }}</title>
+    <title>{{ __('Miguel Mort - Desarrollo Web y Soluciones TI') }}</title>
     <meta name="description" content="{{ 'Contenido técnico y soluciones personalizadas en desarrollo web' }}">
     <meta property="og:image" content="{{ asset('images/default-og-image.jpg') }}">
 
@@ -15,7 +15,6 @@
     <!-- Scripts -->
     @routes
     @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
-    @inertiaHead
 </head>
 <body class="font-sans antialiased">
 @inertia

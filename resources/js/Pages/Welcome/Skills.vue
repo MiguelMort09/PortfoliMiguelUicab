@@ -25,7 +25,7 @@ onMounted(() => {
 
 <template>
     <section id="skills" class="w-full mt-6 lg:mt-12 px-4 mx-auto lg:max-w-6xl">
-        <TitleSection>Capabilities & Tools</TitleSection>
+        <TitleSection>Habilidades Técnicas y Herramientas</TitleSection>
         <div class="flex flex-wrap items-center justify-start gap-4">
             <div v-for="(typeTech, index) in technologies"
                  :key="index"

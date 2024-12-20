@@ -1,0 +1,1 @@
+import{T as t}from"./TitleSection-DfnFzhk4.js";import{B as o,o as a,f as s,a as n,w as i,d as r}from"./app-VLcILHwr.js";import"./_plugin-vue_export-helper-DlAUqK2U.js";const l={class:"container-landing-page"},f=o({__name:"Testimonials",setup(c){return(m,e)=>(a(),s("section",l,[n(t,null,{default:i(()=>e[0]||(e[0]=[r("Testimonials")])),_:1})]))}});export{f as default};

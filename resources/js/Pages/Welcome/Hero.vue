@@ -33,7 +33,7 @@ onMounted(() => typeEffect());
 </script>
 
 <template>
-    <div class="relative py-12 min-h-screen bg-gradient-to-b from-slate-900 via-black to-black">
+    <div class="relative py-12 min-h-screen bg-gradient-to-b from-black via-slate-900 to-black">
         <!-- Background Image -->
         <img
             :src="backgroundPolygon"
@@ -41,9 +41,9 @@ onMounted(() => typeEffect());
             class="absolute inset-0 h-full w-full object-cover opacity-30"
         />
 
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black to-black"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black"></div>
 
-        <div class="relative min-h-screen w-full content-center">
+        <div class="relative z-20 min-h-screen w-full content-center">
             <div class="w-full flex justify-center mb-16">
                 <img
                     alt="Profile Picture"

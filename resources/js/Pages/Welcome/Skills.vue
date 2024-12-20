@@ -26,13 +26,13 @@ onMounted(() => {
 <template>
     <section id="skills" class="w-full mt-6 lg:mt-12 px-4 mx-auto lg:max-w-6xl">
         <TitleSection>Habilidades Técnicas y Herramientas</TitleSection>
-        <div class="flex flex-wrap items-center justify-start gap-4">
+        <div class="flex flex-wrap items-center justify-center  gap-4">
             <div v-for="(typeTech, index) in technologies"
                  :key="index"
                  class="relative group"
             >
                 <h3 :class="{'bg-slate-900': selectedTech === typeTech}"
-                    class="text-xl font-semibold py-2 px-4 cursor-pointer rounded-lg  border border-gray-600 group-hover:text-white hover:bg-slate-900 transition-all duration-150"
+                    class="md:text-xl font-semibold py-1 sm:py-2 px-2 sm:px-4 cursor-pointer rounded-lg  border border-gray-600 group-hover:text-white hover:bg-slate-900 transition-all duration-150"
                     v-on:click="selectedTech = typeTech">
                     {{ typeTech.type }}
                 </h3>
@@ -44,16 +44,19 @@ onMounted(() => {
                 <ul class="w-full flex flex-wrap justify-center gap-6 transition-all ease-in-out duration-300 delay-300	">
                     <li v-for="(skill, idx) in selectedTech.technologies"
                         :key="idx"
-                        class="text-center w-20"
+                        class="text-center w-12 md:w-20"
                     >
-                        <img
-                            :alt="skill.name"
-                            :src="skill.icon"
-                            class="size-20 p-3 object-cover rounded-full shadow-lg border border-gray-600 bg-gradient-to-b from-slate-900 via-black to-slate-900 transition-transform transform hover:scale-110 duration-300"
-                        />
-                        <h4 class="mt-2 text-sm font-medium text-gray-300 transition-colors duration-300">
-                            {{ skill.name }}
-                        </h4>
+                        <div class="w-full justify-items-center">
+                            <img
+                                :alt="skill.name"
+                                :src="skill.icon"
+                                class="w-12 md:w-20 p-3 object-cover rounded-full shadow-lg border border-gray-600 bg-gradient-to-b from-slate-900 via-black to-slate-900 transition-transform transform hover:scale-110 duration-300"
+                            />
+
+                            <h4 class="mt-4 text-sm font-medium text-gray-300 transition-colors duration-300">
+                                {{ skill.name }}
+                            </h4>
+                        </div>
                     </li>
                 </ul>
             </div>

@@ -33,17 +33,18 @@ onMounted(() => typeEffect());
 </script>
 
 <template>
-    <div class="relative py-12 min-h-screen bg-gradient-to-b from-black via-slate-900 to-black content-center">
+    <div class="relative py-12 min-h-screen bg-gradient-to-b from-slate-900 via-black to-black">
         <!-- Background Image -->
         <img
             :src="backgroundPolygon"
             alt="Background"
-            class="absolute inset-0 h-full w-full object-cover opacity-30 justify-items-center"
+            class="absolute inset-0 h-full w-full object-cover opacity-30"
         />
-        <!-- Hero Content -->
-        <div class="relative z-20 inset-0 content-center">
-            <!-- Profile Image -->
-            <div class="w-full mb-6 justify-items-center">
+
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black to-black"></div>
+
+        <div class="relative min-h-screen w-full content-center">
+            <div class="w-full flex justify-center mb-16">
                 <img
                     alt="Profile Picture"
                     class="w-40 h-40 lg:w-48 lg:h-48 rounded-full border-4 border-gray-300 shadow-lg"

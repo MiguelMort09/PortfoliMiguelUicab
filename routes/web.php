@@ -8,9 +8,8 @@ Route::get('/', function () {
     return Inertia::render('Welcome');
 })->name('welcome');
 
-Route::resource('employments', \App\Http\Controllers\EmploymentController::class);
-Route::resource('projects', \App\Http\Controllers\ProjectController::class);
-Route::resource('technologies', \App\Http\Controllers\TechnologiesController::class);
+Route::resource('employments', \App\Http\Controllers\EmploymentController::class)->names('employments');
+Route::resource('technologies', \App\Http\Controllers\TechnologiesController::class)->names('technologies');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

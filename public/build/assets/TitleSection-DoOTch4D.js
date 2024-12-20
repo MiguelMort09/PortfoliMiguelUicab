@@ -1,0 +1,1 @@
+import{_ as e}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{o,f as s,m as n}from"./app-XhuBlWeY.js";const r={},c={class:"text-xl md:text-4xl text-left font-bold text-red-500 my-4 animate-slide-in-left"};function l(t,a){return o(),s("h2",c,[n(t.$slots,"default")])}const m=e(r,[["render",l]]);export{m as T};

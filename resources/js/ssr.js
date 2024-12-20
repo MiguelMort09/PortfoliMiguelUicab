@@ -1,11 +1,20 @@
-import {defineConfig} from 'vite';
-import laravel from 'laravel-vite-plugin';
+import {createInertiaApp} from '@inertiajs/vue3'
+import createServer from '@inertiajs/vue3/server'
+import {renderToString} from '@vue/server-renderer'
+import {createSSRApp, h} from 'vue'
 
-export default defineConfig({
-    plugins: [
-        laravel({
-            input: 'resources/js/app.ts',
-            ssr: 'resources/js/ssr.js',
-        }),
-    ],
-});
+createServer(page =>
+    createInertiaApp({
+        page,
+        render: renderToString,
+        resolve: name => {
+            const pages = import.meta.glob('./Pages/**/*.vue', {eager: true})
+            return pages[`./Pages/${name}.vue`]
+        },
+        setup({App, props, plugin}) {
+            return createSSRApp({
+                render: () => h(App, props),
+            }).use(plugin)
+        },
+    }),
+)

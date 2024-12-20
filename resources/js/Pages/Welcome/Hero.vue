@@ -33,8 +33,7 @@ onMounted(() => typeEffect());
 </script>
 
 <template>
-    <div
-        class="relative py-12 min-h-screen bg-gradient-to-b from-black via-slate-900 to-black flex flex-col justify-center items-center">
+    <div class="relative py-12 min-h-screen bg-gradient-to-b from-black via-slate-900 to-black content-center">
         <!-- Background Image -->
         <img
             :src="backgroundPolygon"
@@ -48,7 +47,7 @@ onMounted(() => typeEffect());
         <!-- Hero Content -->
         <div class="relative z-20 max-w-5xl mx-auto px-6 text-center">
             <!-- Profile Image -->
-            <div class="mb-6 justify-items-center">
+            <div class="w-full mb-6 justify-items-center">
                 <img
                     alt="Profile Picture"
                     class="w-40 h-40 lg:w-48 lg:h-48 rounded-full border-4 border-gray-300 shadow-lg"

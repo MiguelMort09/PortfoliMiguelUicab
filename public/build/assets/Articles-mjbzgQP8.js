@@ -1,1 +1,0 @@
-import{T as t}from"./TitleSection-DoOTch4D.js";import{B as o,o as a,f as n,a as s,w as r,d as i}from"./app-XhuBlWeY.js";import"./_plugin-vue_export-helper-DlAUqK2U.js";const c={class:"container-landing-page"},f=o({__name:"Articles",setup(l){return(p,e)=>(a(),n("section",c,[s(t,null,{default:r(()=>e[0]||(e[0]=[i("Blog")])),_:1})]))}});export{f as default};

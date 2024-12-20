@@ -23,3 +23,5 @@ yarn-error.log
 /.vscode
 /.zed
 resources/js/ziggy.js
+/public/build/assets
+public/build/manifest.json

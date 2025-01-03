@@ -12,14 +12,17 @@ import {PrimeIcons} from '@primevue/core/api';
                 <div class="w-full columns-1 md:columns-2 space-y-2 justify-items-center md:justify-items-start">
 
                     <a class="flex items-center text-blue-400 hover:underline"
-                       href="https://www.linkedin.com/in/miguelmort/"
+                       href="https://www.linkedin.com/in/miguel-ernesto-uicab-canabal-2b72601bb/"
                        target="_blank">
                         <i :class="PrimeIcons.LINKEDIN" style="color: white"></i>
                         <span class="ml-2">LinkedIn</span>
                     </a>
-
-
-                    <!-- WhatsApp -->
+                    <a class="flex items-center text-blue-400 hover:underline"
+                       href="https://www.linkedin.com/in/miguel-ernesto-uicab-canabal-2b72601bb/"
+                       target="_blank">
+                        <i :class="PrimeIcons.GITHUB" style="color: white"></i>
+                        <span class="ml-2">GitHub</span>
+                    </a>
                     <a class="flex items-center text-green-400 hover:underline" href="https://wa.me/529821029769"
                        target="_blank">
                         <i :class="PrimeIcons.WHATSAPP" style="color: white"></i>

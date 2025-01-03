@@ -33,7 +33,8 @@ onMounted(() => typeEffect());
 </script>
 
 <template>
-    <div class="relative py-12 min-h-screen bg-gradient-to-b from-black via-slate-900 to-black">
+    <section
+        class="relative h-screen flex items-center justify-center text-white overflow-hidden bg-gradient-to-b from-slate-950 via-slate-950 to-black">
         <!-- Background Image -->
         <img
             :src="backgroundPolygon"
@@ -58,34 +59,19 @@ onMounted(() => typeEffect());
                 </h1>
 
                 <!-- Description -->
-                <p class="font-medium sm:text-lg lg:text-xl text-gray-300 mb-6 leading-relaxed">
-                    Desarrollador Full Stack con 4 años de experiencia. Ingeniero en Tecnologías de Software,
-                    especializado
-                    en el desarrollo de aplicaciones web con PHP y Laravel.
+                <p class="font-medium sm:text-lg lg:text-2xl text-gray-300 mb-6 leading-relaxed">
+                    Full Stack Developer with 4 years of experience
                 </p>
 
                 <!-- Quote -->
                 <blockquote class="sm:text-lg lg:text-2xl text-gray-200 italic border-l-4 border-red-500 pl-4">
                     "Simplicity is key; true progress is not measured by effort, but by finding the most efficient way
-                    to
-                    achieve it."
+                    to achieve it."
                 </blockquote>
             </div>
         </div>
-    </div>
-
+    </section>
 </template>
 
 <style scoped>
-/* Blinking cursor for typing effect */
-.blinking-cursor {
-    display: inline-block;
-    animation: blink 1s steps(1) infinite;
-}
-
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
-}
 </style>

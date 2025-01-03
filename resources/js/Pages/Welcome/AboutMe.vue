@@ -1,54 +1,68 @@
 <script lang="ts" setup>
-import TitleSection from "@/Components/TitleSection.vue";
-
 const profileImageUrl = "/assets/images/IMG_6430.PNG";
 </script>
 
 <template>
-    <section id="about" class="w-full px-4 mx-auto lg:max-w-6xl content-center">
-        <TitleSection>Sobre Mí</TitleSection>
-
-        <div class="md:flex md:space-x-16 space-y-4 md:space-y-0 content-center">
-            <!-- Text Content -->
-            <div
-                class="md:basis-2/3 space-y-4 text-neutral-300 leading-relaxed rounded-md ">
-                <p class="md:text-xl text-justify">
-                    ¡Hola! Soy Miguel Uicab, aunque todos me llaman <em>Mort</em>. Tengo 24 años y una gran pasión por
-                    la tecnología. Tengo intereses filantropicos así como en el servicio público, con el propósito de
-                    convertirme en un empresario exitoso. Soy extrovertido, lo que me ha permitido conectar con gente
-                    increíble en diversos ámbitos: trabajo, viajes, cursos, reuniones, etc.
-                </p>
-                <p class="md:text-lg text-justify">
-                    En mi tiempo libre, disfruto pasar tiempo con amigos, ver películas, escuchar música, leer, meditar
-                    y buscar mi crecimiento personal. Mis deportes favoritos son la F1 y el boxeo, que, aunque parecen
-                    individuales, dependen de un equipo para lograr el éxito. Creo firmemente que "el éxito se logra
-                    mejor en equipo". Mis experiencias y errores me han ayudado a crecer tanto personal como
-                    profesionalmente. Lo cual me ha ayudado a tener un enfoque en soluciones rápidas y eficientes,
-                    manteniendo las buenas prácticas y calidad.
-                </p>
-
+    <section id="about" class="py-20 bg-gradient-to-b from-black to-slate-950 text-white">
+        <div class="container mx-auto px-4 section-fade-in">
+            <h2 class="text-4xl font-bold mb-12 text-center">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-12">
+                <div class="md:w-1/3">
+                    <img
+                        alt="Miguel Uicab"
+                        class="rounded-full shadow-lg w-full"
+                        src="/assets/images/IMG_6430.PNG"
+                    />
+                </div>
+                <div class="md:w-2/3">
+                    <div
+                        class="mb-8"
+                    >
+                        <h3 class="text-2xl font-semibold mb-4 flex items-center">
+                            Personal Info
+                        </h3>
+                        <p class="mb-4 text-xl text-justify">
+                            ¡Hola! I'm Miguel Uicab, but everyone calls me Mort. At 24, I'm deeply passionate about
+                            technology. I have philanthropic interests and aspirations in public service, with the
+                            ultimate goal of becoming a successful entrepreneur.
+                        </p>
+                        <p class="mb-4 text-xl text-justify">
+                            My extroverted nature has allowed me to connect with incredible people across various
+                            spheres: work, travel, courses, meetings, and more.
+                        </p>
+                    </div>
+                    <div
+                    >
+                        <h3 class="text-2xl font-semibold mb-4 flex items-center">
+                            Interests & Hobbies
+                        </h3>
+                        <ul class="grid grid-cols-2 gap-4 text-lg">
+                            <li class="flex items-center">
+                                Reading
+                            </li>
+                            <li class="flex items-center">
+                                Music
+                            </li>
+                            <li class="flex items-center">
+                                F1 & Boxing
+                            </li>
+                            <li class="flex items-center">
+                                Entrepreneurship
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-
-            <!-- Image -->
-            <div class="md:basis-1/3 flex justify-center items-center">
-                <img
-                    alt="Profile Picture"
-                    class="w-60 h-60 md:w-72 md:h-72 rounded-full shadow-2xl border-4 border-slate-700 object-cover"
-                    src="/assets/images/IMG_6430.PNG"
-                />
+            <div
+                class="mt-12 text-center"
+            >
+                <p class="text-xl lg:text-3xl italic">
+                    "Success is best achieved as a team."
+                </p>
             </div>
         </div>
     </section>
 </template>
 <style scoped>
-.back-body {
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), #0a0a0a 60%);
-    background-color: #0a0a0a;
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-}
+
 </style>

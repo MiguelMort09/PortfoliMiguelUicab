@@ -1,23 +1,19 @@
 <script lang="ts" setup>
 import Hero from "@/Pages/Welcome/Hero.vue";
 import AboutMe from "@/Pages/Welcome/AboutMe.vue";
+import Experiences from "@/Pages/Welcome/Experiences.vue";
 import Skills from "@/Pages/Welcome/Skills.vue";
-import Employments from "@/Pages/Welcome/Employments.vue";
+import Testimonials from "@/Pages/Welcome/Testimonials.vue";
 import GuestLayout from "@/Layouts/GuestLayout.vue";
 </script>
 
 <template>
     <GuestLayout>
         <Hero/>
-        <section class="py-20">
-            <Employments/>
-        </section>
-        <section class="py-10">
-            <AboutMe/>
-        </section>
-        <section class="py-10">
-            <Skills/>
-        </section>
+        <AboutMe/>
+        <Experiences/>
+        <Skills/>
+        <Testimonials/>
     </GuestLayout>
 </template>
 

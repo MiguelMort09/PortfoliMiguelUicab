@@ -33,7 +33,7 @@ onMounted(async () => {
 </script>
 
 <template>
-    <section id="employments" class="py-20 bg-black text-white">
+    <section id="experiences" class="py-20 bg-black text-white">
         <div class="container mx-auto px-4 section-fade-in">
             <TitleSection>Experiencia Laboral</TitleSection>
             <div class="flex flex-col md:flex-row">

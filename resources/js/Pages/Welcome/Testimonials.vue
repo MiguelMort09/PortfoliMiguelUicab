@@ -23,7 +23,7 @@ const prevTestimonial = () => {
 }
 </script>
 <template>
-  <section class="py-20 bg-slate-950 text-white bg-slate-950">
+  <section id="testimonials" class="py-20 bg-slate-950 text-white bg-slate-950">
     <TitleSection>Testimonials</TitleSection>
     <div class="relative">
       <div>

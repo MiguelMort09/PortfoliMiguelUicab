@@ -16,7 +16,7 @@
     @routes
     @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
 </head>
-<body class="font-sans antialiased">
+<body class="font-sans antialiased w-full">
 @inertia
 </body>
 </html>

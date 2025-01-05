@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import {PrimeIcons} from '@primevue/core/api';
 </script>
 
 <template>

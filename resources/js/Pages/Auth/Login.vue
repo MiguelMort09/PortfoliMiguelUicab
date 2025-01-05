@@ -4,7 +4,6 @@ import GuestLayout from '@/Layouts/GuestLayout.vue';
 import InputError from '@/Components/InputError.vue';
 import TextInput from '@/Components/TextInput.vue';
 import {Head, Link, useForm} from '@inertiajs/vue3';
-import {PrimeIcons} from '@primevue/core/api';
 
 defineProps({
     canResetPassword: {

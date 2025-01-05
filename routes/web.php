@@ -32,13 +32,18 @@ Route::get('/auth/redirect', function () {
 Route::get('/auth/callback', function () {
     $githubUser = Socialite::driver('google')->user();
 
-    $user = \App\Models\User::updateOrCreate([
-        'github_id' => $githubUser->id,
-    ], [
-        'name' => $githubUser->name,
-        'email' => $githubUser->email,
-    ]);
+    \Illuminate\Support\Facades\Log::debug($githubUser);
 
+    $user = \App\Models\User::where('email', $githubUser->email)->first();
+
+    if ($user === null) {
+        $user = \App\Models\User::create([
+            'name' => $githubUser->name,
+            'email' => $githubUser->email,
+            'password' => \Illuminate\Support\Facades\Hash::make('password'),
+        ]);
+    }
+    
     \Illuminate\Support\Facades\Auth::login($user);
 
     return redirect('/dashboard');

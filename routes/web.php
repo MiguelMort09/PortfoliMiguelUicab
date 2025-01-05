@@ -31,8 +31,7 @@ Route::get('/auth/redirect', function () {
 
 Route::get('/auth/callback', function () {
     $githubUser = Socialite::driver('google')->user();
-
-    \Illuminate\Support\Facades\Log::debug($githubUser);
+    
 
     $user = \App\Models\User::where('email', $githubUser->email)->first();
 
@@ -43,7 +42,7 @@ Route::get('/auth/callback', function () {
             'password' => \Illuminate\Support\Facades\Hash::make('password'),
         ]);
     }
-    
+
     \Illuminate\Support\Facades\Auth::login($user);
 
     return redirect('/dashboard');

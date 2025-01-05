@@ -104,7 +104,7 @@ const submit = () => {
                         </form>
 
                         <div class="mt-4 block">
-                            <a href="/auth/redirect-w">
+                            <a href="/auth/redirect">
                                 <button
                                     class="w-full  font-bold text-center border border-white rounded-lg py-2 px-4">
                                     <span class="ml-4">GOOGLE</span>

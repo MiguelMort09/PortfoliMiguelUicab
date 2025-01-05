@@ -3,7 +3,7 @@ import {PrimeIcons} from '@primevue/core/api';
 </script>
 
 <template>
-    <footer class="bg-black text-white py-8 ">
+    <footer class="bg-black text-white py-8 bottom-0">
         <div class="container mx-auto px-4 md:flex justify-between h-full items-end">
             <div class="flex flex-col items-center md:items-start space-y-4">
                 <h3 class="text-lg font-semibold">

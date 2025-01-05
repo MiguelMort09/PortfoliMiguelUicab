@@ -5,6 +5,7 @@ import Experiences from "@/Pages/Welcome/Experiences.vue";
 import Skills from "@/Pages/Welcome/Skills.vue";
 import Testimonials from "@/Pages/Welcome/Testimonials.vue";
 import GuestLayout from "@/Layouts/GuestLayout.vue";
+import Footer from "@/Pages/Welcome/Footer.vue";
 </script>
 
 <template>
@@ -15,6 +16,7 @@ import GuestLayout from "@/Layouts/GuestLayout.vue";
         <Skills/>
         <Testimonials/>
     </GuestLayout>
+    <Footer/>
 </template>
 
 <style scoped>

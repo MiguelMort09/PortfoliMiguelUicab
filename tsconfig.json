@@ -13,7 +13,8 @@
         "skipLibCheck": false,
         "paths": {
             "@/*": [
-                "./resources/js/*"
+                "./resources/js/*",
+                "./primevue/auto-import-resolver/*"
             ],
             "ziggy-js": [
                 "./vendor/tightenco/ziggy"

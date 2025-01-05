@@ -1,6 +1,5 @@
 <script setup>
 import Navigation from "@/Components/LandingPage/Navigation.vue";
-import Footer from "@/Pages/Welcome/Footer.vue";
 import 'primeicons/primeicons.css';
 </script>
 
@@ -10,6 +9,5 @@ import 'primeicons/primeicons.css';
         <main>
             <slot/>
         </main>
-        <Footer/>
     </div>
 </template>

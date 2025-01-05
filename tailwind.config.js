@@ -1,5 +1,5 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
-import forms from '@tailwindcss/forms';
+import primeui from 'tailwindcss-primeui';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -16,7 +16,6 @@ export default {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
         },
+        plugins: [primeui,]
     },
-
-    plugins: [forms],
 };

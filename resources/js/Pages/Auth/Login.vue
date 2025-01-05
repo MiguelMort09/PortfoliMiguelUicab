@@ -89,10 +89,9 @@ const submit = () => {
                                 Or sign in with
                             </div>
                             <div class="mt-4 block">
-                                <a href="">
+                                <a href="/auth/redirect-w">
                                     <button
                                         class="w-full  font-bold text-center border border-white rounded-lg py-2 px-4">
-                                        <i :class="PrimeIcons.GOOGLE" style="color: white"></i>
                                         <span class="ml-4">GOOGLE</span>
                                     </button>
                                 </a>

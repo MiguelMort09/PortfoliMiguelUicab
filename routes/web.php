@@ -37,8 +37,6 @@ Route::get('/auth/callback', function () {
     ], [
         'name' => $githubUser->name,
         'email' => $githubUser->email,
-        'github_token' => $githubUser->token,
-        'github_refresh_token' => $githubUser->refreshToken,
     ]);
 
     \Illuminate\Support\Facades\Auth::login($user);

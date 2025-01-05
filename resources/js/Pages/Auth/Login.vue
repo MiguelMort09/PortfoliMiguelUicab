@@ -88,14 +88,7 @@ const submit = () => {
                             <div class="mt-4 block">
                                 Or sign in with
                             </div>
-                            <div class="mt-4 block">
-                                <a href="/auth/redirect-w">
-                                    <button
-                                        class="w-full  font-bold text-center border border-white rounded-lg py-2 px-4">
-                                        <span class="ml-4">GOOGLE</span>
-                                    </button>
-                                </a>
-                            </div>
+
 
                             <div class="mt-4 flex items-center justify-end">
                                 <Link
@@ -109,6 +102,15 @@ const submit = () => {
 
                             </div>
                         </form>
+
+                        <div class="mt-4 block">
+                            <a href="/auth/redirect-w">
+                                <button
+                                    class="w-full  font-bold text-center border border-white rounded-lg py-2 px-4">
+                                    <span class="ml-4">GOOGLE</span>
+                                </button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -31,14 +31,14 @@ Route::get('/auth/redirect', function () {
 
 Route::get('/auth/callback', function () {
     $githubUser = Socialite::driver('google')->user();
-    
 
-    $user = \App\Models\User::where('email', $githubUser->email)->first();
+
+    $user = \App\Models\User::where('email', $githubUser->getEmail())->first();
 
     if ($user === null) {
         $user = \App\Models\User::create([
-            'name' => $githubUser->name,
-            'email' => $githubUser->email,
+            'name' => $githubUser->getName(),
+            'email' => $githubUser->getEmail(),
             'password' => \Illuminate\Support\Facades\Hash::make('password'),
         ]);
     }

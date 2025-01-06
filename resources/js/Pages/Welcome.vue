@@ -15,8 +15,6 @@ const value = ref(0);
 defineProps<{
     canLogin?: boolean;
     canRegister?: boolean;
-    laravelVersion: string;
-    phpVersion: string;
 }>();
 
 function handleImageError() {

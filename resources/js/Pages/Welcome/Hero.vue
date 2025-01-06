@@ -5,7 +5,7 @@ const profile = "assets/images/IMG_2921.jpg";
 
 <template>
     <section
-        class="relative h-screen flex items-center justify-center text-white overflow-hidden bg-gradient-to-b from-slate-950 via-slate-950 to-black transition ease-in-out delay-300 scale-100 duration-1000">
+        class="relative min-h-screen flex items-center justify-center text-white overflow-hidden bg-gradient-to-b from-slate-950 via-slate-950 to-black transition ease-in-out delay-300 scale-100 duration-1000 py-12">
         <!-- Background Image -->
         <img
             :src="backgroundPolygon"

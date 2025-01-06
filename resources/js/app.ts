@@ -1,39 +1,34 @@
-import "../css/app.css";
-import "./bootstrap";
+import '../css/app.css';
+import './bootstrap';
 
-import {createInertiaApp} from "@inertiajs/vue3";
-import {resolvePageComponent} from "laravel-vite-plugin/inertia-helpers";
-import {createApp, DefineComponent, h} from "vue";
-import PrimeVue from "primevue/config";
-import material from './presets/lara';
-import {ZiggyVue} from "ziggy-js";
+import {createInertiaApp} from '@inertiajs/vue3';
+import {resolvePageComponent} from 'laravel-vite-plugin/inertia-helpers';
+import {createApp, DefineComponent, h} from 'vue';
+import {ZiggyVue} from '../../vendor/tightenco/ziggy';
+import PrimeVue from 'primevue/config';
+import Aura from "@primevue/themes/aura";
 
+const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
 createInertiaApp({
+    title: (title) => `${title} - ${appName}`,
     resolve: (name) =>
         resolvePageComponent(
             `./Pages/${name}.vue`,
-            import.meta.glob<DefineComponent>("./Pages/**/*.vue"),
+            import.meta.glob<DefineComponent>('./Pages/**/*.vue'),
         ),
-    setup({el, App, props}) {
+    setup({el, App, props, plugin}) {
         createApp({render: () => h(App, props)})
+            .use(plugin)
+            .use(ZiggyVue)
             .use(PrimeVue, {
                 theme: {
-                    preset: material,
-                    options: {
-                        prefix: 'p',
-                        darkModeSelector: 'app-dark',
-                        cssLayer: {
-                            name: 'primevue',
-                            order: 'app-styles, primevue, another-css-library'
-                        }
-                    }
+                    preset: Aura
                 }
             })
-            .use(ZiggyVue)
             .mount(el);
     },
     progress: {
-        color: "#4B5563",
+        color: '#4B5563',
     },
 });

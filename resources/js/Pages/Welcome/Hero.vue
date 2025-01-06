@@ -9,6 +9,7 @@ const roles = [
 ];
 
 const backgroundPolygon = "assets/images/background-polygon.svg";
+const profile = "assets/images/IMG_2921.jpg";
 
 const currentRole = ref("");
 let roleIndex = 0;
@@ -47,9 +48,9 @@ onMounted(() => typeEffect());
         <div class="relative z-20 w-full md:min-h-screen md:content-center">
             <div class="w-full flex justify-center mb-16">
                 <img
+                    :src="profile"
                     alt="Profile Picture"
                     class="w-40 h-40 lg:w-48 lg:h-48 rounded-full border-4 border-gray-300 shadow-lg"
-                    src="/assets/images/IMG_2921.jpg"
                 />
             </div>
             <div class="sm:px-10 md:max-w-5xl mx-auto px-6 ">

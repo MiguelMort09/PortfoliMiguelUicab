@@ -13,7 +13,12 @@ interface Employee {
 const employments = ref<Employee[]>([]);
 
 const currentIndex = ref<number>(0);
-const employeeSelected = ref<Employee>({});
+const employeeSelected = ref<Employee>({
+    jobTitle: '',
+    companyName: '',
+    dates: '',
+    description: ''
+});
 
 const setEmployee = (index: number) => {
     currentIndex.value = index;

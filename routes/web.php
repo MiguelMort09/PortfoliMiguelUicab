@@ -10,9 +10,7 @@ use Laravel\Socialite\Facades\Socialite;
 Route::get('/', function () {
     return Inertia::render('Welcome');
 })->name('welcome');
-
 Route::get('/employments', [EmploymentController::class, 'index'])->name('employments.index');
-
 Route::get('technologies', [TechnologiesController::class, 'index'])->name('technologies.index');
 
 Route::get('/dashboard', function () {
@@ -27,7 +25,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/auth/redirect', function () {
     return Socialite::driver('google')->redirect();
-});
+})->name('auth.redirect');
 
 Route::get('/auth/callback', function () {
     $githubUser = Socialite::driver('google')->user();
@@ -47,5 +45,5 @@ Route::get('/auth/callback', function () {
 
     return redirect()->route('dashboard');
 
-});
+})->name('auth.callback');
 require __DIR__ . '/auth.php';

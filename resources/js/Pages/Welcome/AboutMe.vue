@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const profileImageUrl = "/assets/images/IMG_6430.PNG";
+const profileImageUrl = "assets/images/IMG_6430.PNG";
 </script>
 
 <template>
@@ -9,9 +9,9 @@ const profileImageUrl = "/assets/images/IMG_6430.PNG";
             <div class="flex flex-col md:flex-row items-center md:items-start gap-12">
                 <div class="md:w-1/3">
                     <img
+                        :src="profileImageUrl"
                         alt="Miguel Uicab"
                         class="rounded-full shadow-lg w-full"
-                        src="/assets/images/IMG_6430.PNG"
                     />
                 </div>
                 <div class="md:w-2/3">

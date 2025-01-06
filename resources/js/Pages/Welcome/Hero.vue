@@ -35,7 +35,7 @@ onMounted(() => typeEffect());
 
 <template>
     <section
-        class="relative h-screen flex items-center justify-center text-white overflow-hidden bg-gradient-to-b from-slate-950 via-slate-950 to-black">
+        class="relative h-screen flex items-center justify-center text-white overflow-hidden bg-gradient-to-b from-slate-950 via-slate-950 to-black animate-duration-1000">
         <!-- Background Image -->
         <img
             :src="backgroundPolygon"
@@ -73,6 +73,3 @@ onMounted(() => typeEffect());
         </div>
     </section>
 </template>
-
-<style scoped>
-</style>

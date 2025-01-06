@@ -30,9 +30,19 @@ function handleImageError() {
         <Head title="Welcome"/>
         <Hero/>
         <AboutMe/>
-        <Experiences/>
-        <Skills/>
-        <Testimonials/>
+        <div v-animateonscroll="{ enterClass: 'animate-fadeinright', leaveClass: 'animate-fadeoutright' }"
+             class="transition ease-in-out delay-300 scale-100  duration-1000">
+
+            <Experiences/>
+        </div>
+        <div v-animateonscroll="{ enterClass: 'animate-zoomin', leaveClass: 'animate-fadeout' }"
+             class="transition ease-in-out delay-500 scale-100  duration-1000">
+            <Skills/>
+        </div>
+        <div v-animateonscroll="{ enterClass: 'animate-fade-in-left', leaveClass: 'animate-fade-out-left' }"
+             class="transition ease-in-out delay-500 scale-100  duration-1000">
+            <Testimonials/>
+        </div>
         <Footer/>
     </GuestLayout>
 

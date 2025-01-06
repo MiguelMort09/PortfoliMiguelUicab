@@ -3,7 +3,8 @@ const profileImageUrl = "assets/images/IMG_6430.PNG";
 </script>
 
 <template>
-    <section id="about" class="py-20 bg-gradient-to-b from-black to-slate-950 text-white">
+    <section id="about" v-animateonscroll="{ enterClass: 'animate-fadein', leaveClass: 'animate-fadeout' }"
+             class="py-20 bg-gradient-to-b from-black to-slate-950 text-white transition ease-in-out delay-300 scale-100  duration-1000">
         <div class="container mx-auto px-4 section-fade-in">
             <h2 class="text-4xl font-bold mb-12 text-center">About Me</h2>
             <div class="flex flex-col md:flex-row items-center md:items-start gap-12">

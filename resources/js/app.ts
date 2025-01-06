@@ -7,6 +7,7 @@ import {createApp, DefineComponent, h} from 'vue';
 import {ZiggyVue} from '../../vendor/tightenco/ziggy';
 import PrimeVue from 'primevue/config';
 import Aura from "@primevue/themes/aura";
+import AnimateOnScroll from 'primevue/animateonscroll';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
@@ -26,6 +27,7 @@ createInertiaApp({
                 }
             })
             .use(ZiggyVue)
+            .directive('animateonscroll', AnimateOnScroll)
             .mount(el);
     },
     progress: {

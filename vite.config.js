@@ -12,6 +12,6 @@ export default defineConfig({
         vue(),
     ],
     build: {
-        ssr: true,
+        ssr: false,
     },
 });

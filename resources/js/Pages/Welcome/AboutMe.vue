@@ -8,14 +8,18 @@ const profileImageUrl = "assets/images/IMG_6430.PNG";
         <div class="container mx-auto px-4 section-fade-in">
             <h2 class="text-4xl font-bold mb-12 text-center">About Me</h2>
             <div class="flex flex-col md:flex-row items-center md:items-start gap-12">
-                <div class="md:w-1/3">
+                <div
+                    class=" md:w-1/3 ">
                     <img
+                        v-animateonscroll="{ enterClass: 'animate-zoomin', leaveClass: 'animate-fadeout' }"
                         :src="profileImageUrl"
                         alt="Miguel Uicab"
-                        class="rounded-full shadow-lg w-full"
+
+                        class="rounded-full shadow-lg w-full shadow-lg justify-center items-center animate-duration-1000"
                     />
                 </div>
-                <div class="md:w-2/3">
+                <div v-animateonscroll="{ enterClass: 'animate-fadein', leaveClass: 'animate-fadeout' }"
+                     class="md:w-2/3 animate-duration-1000">
                     <div
                         class="mb-8"
                     >

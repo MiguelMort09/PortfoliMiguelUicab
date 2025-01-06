@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import GuestLayout from '@/Layouts/GuestLayout.vue';
-import {Head, Link, useForm} from '@inertiajs/vue3';
+import {Head, useForm} from '@inertiajs/vue3';
 import {InputText} from "primevue";
 import InputError from "@/Components/InputError.vue";
 
@@ -79,7 +79,7 @@ const image = 'images/login.png';
                         </form>
                         <hr class="my-6 w-full border border-neutral-200"/>
                         <div class="mt-4">
-                            <Link :href="route('auth.redirect')">
+                            <a href="/auth/redirect">
                                 <button
                                     class="w-full py-2 bg-blue-950 shadow-lg rounded-lg hover:bg-blue-950/70 hover:scale-105 transition duration-200">
                                     <i class="pi pi-google" style="color: white"></i>
@@ -87,7 +87,7 @@ const image = 'images/login.png';
                                 Inicia Sesión con Google
                                     </span>
                                 </button>
-                            </Link>
+                            </a>
                         </div>
                     </div>
                     <div class="w-full flex-col justify-center items-center">

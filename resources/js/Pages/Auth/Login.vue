@@ -29,6 +29,10 @@ const submit = () => {
     });
 };
 const image = 'images/login.png';
+
+const loginWithGoogle = () => {
+    window.location.href = '/auth/redirect';
+};
 </script>
 
 <template>
@@ -79,14 +83,13 @@ const image = 'images/login.png';
                         </form>
                         <hr class="my-6 w-full border border-neutral-200"/>
                         <div class="mt-4">
-                            <a
-                                href="/auth/redirect">
-                                <button
-                                    class="w-full text-center py-2 bg-blue-950 shadow-lg rounded-lg hover:bg-blue-950/70 hover:scale-105 transition duration-200 ">
-                                    <i class="pi pi-google" style="color: white"></i>
-                                    <span class="ml-2">Inicia Sesión con Google</span>
-                                </button>
-                            </a>
+                            <button
+                                class="w-full text-center py-2 bg-blue-950 shadow-lg rounded-lg hover:bg-blue-950/70 hover:scale-105 transition duration-200 "
+                                @click="loginWithGoogle">
+                                <i class="pi pi-google" style="color: white"></i>
+                                <span class="ml-2">Inicia Sesión con Google</span>
+                            </button>
+
                         </div>
                     </div>
                     <div class="w-full flex-col justify-center items-center">

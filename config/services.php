@@ -38,7 +38,7 @@ return [
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => 'https://miguelmort.tech/auth/callback',
+        'redirect' => env('URI_CLIENT_REDIRECT')
     ],
 
 ];

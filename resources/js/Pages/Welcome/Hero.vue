@@ -10,7 +10,7 @@ const profile = "assets/images/IMG_2921.jpg";
         <img
             :src="backgroundPolygon"
             alt="Background"
-            class="absolute inset-0 h-full w-full object-cover opacity-30 transition-transform">
+            class="absolute inset-0 h-full w-full min-h-screen object-cover opacity-30 transition-transform">
 
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black"></div>
 

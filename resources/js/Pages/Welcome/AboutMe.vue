@@ -15,8 +15,8 @@ const profileImageUrl = "assets/images/IMG_6430.PNG";
                         class="rounded-full shadow-lg w-full shadow-lg justify-center items-center animate-duration-1000"
                     />
                 </div>
-                <div v-animateonscroll="{ enterClass: 'animate-fadein' }"
-                     class="md:w-2/3 animate-duration-1000">
+                <div v-animateonscroll="{ enterClass: 'animate-fadein animate-duration-1000' }"
+                     class="md:w-2/3">
                     <div class="mb-8">
                         <h3 class="text-2xl font-semibold mb-4 flex items-center">
                             Personal Info

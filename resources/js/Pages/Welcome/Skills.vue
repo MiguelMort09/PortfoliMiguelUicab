@@ -39,13 +39,18 @@ onMounted(async () => {
 <template>
     <section id="skills" class="py-20 bg-black text-white">
         <div class="container mx-auto px-2 md:px-4 section-fade-in">
-            <TitleSection>Skills</TitleSection>
+            <TitleSection :title="'Skills'"/>
             <div class="flex flex-col md:flex-row">
                 <div class="md:w-2/3 md:pl-8 order-last md:order-first">
-                    <ul class="w-full h-full mx-auto flex flex-wrap justify-center items-center gap-4">
-                        <li v-for="(skill, idx) in technologies"
+
+                    <ul
+                        v-animateonscroll="{ enterClass: 'animate-zoomin' }"
+                        class="w-full h-full mx-auto grid grid-cols-3 md:grid-cols-6 gap-4 justify-center items-center animate-duration-300"
+                    >
+                        <li
+                            v-for="(skill, idx) in technologies"
                             :key="idx"
-                            class="text-center w-12 md:w-24"
+                            :class="`text-center w-12 md:w-24 group-${Math.floor(idx / 3)}`"
                         >
                             <div class="w-full flex flex-col justify-center items-center">
                                 <img
@@ -62,11 +67,12 @@ onMounted(async () => {
                     </ul>
                 </div>
                 <div class="md:w-1/3 mb-8 md:mb-0">
-                    <button v-for="(typeTech, index) in typeTechs"
-                            :key="index"
-                            :class="{'w-full bg-gradient-to-l from-black via-slate-950 to-slate-900 ': indexSelected === index}"
-                            class="w-full p-4 mb-2 text-lg uppercase transition-colors font-semibold hover:bg-gradient-to-l hover:from-black hover:via-slate-950 hover:to-slate-900"
-                            v-on:click="setTechnology(index)">
+                    <button
+                        v-for="(typeTech, index) in typeTechs"
+                        v-animateonscroll="{  enterClass: 'animate-zoomin' }"
+                        :class="{'w-full bg-gradient-to-r from-black via-slate-950 to-slate-900 ': indexSelected === index}"
+                        class="w-full p-4 mb-2 text-lg uppercase transition-colors font-semibold hover:bg-gradient-to-r hover:from-black hover:via-slate-950 hover:to-slate-900"
+                        v-on:click="setTechnology(index)">
                         {{ typeTech.type }}
                     </button>
                 </div>

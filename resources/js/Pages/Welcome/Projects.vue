@@ -22,15 +22,14 @@ onMounted(() => {
 
 <template>
     <section id="projects" class="container-landing-page">
-        <TitleSection>Projects</TitleSection>
-
+        <TitleSection :title="'Projects'"/>
         <div
             class="border border-red-600 text-red-600 text-center rounded-lg font-bold px-4 py-1"
         >
             El portfolio aun está en construcción pronto verá más proyectos en esta sección
         </div>
         <div v-show="projects.length > 0" class="grid grid-cols-2 gap-8">
-            
+
         </div>
     </section>
 </template>

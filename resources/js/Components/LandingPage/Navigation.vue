@@ -21,9 +21,6 @@ import NavLink from "@/Components/LandingPage/NavLink.vue";
                 <NavLink :active="false" href="#testimonials">
                     Testimonials
                 </NavLink>
-                <NavLink :active="false" :href="route('login')">
-                    <i class="pi pi-user"></i>
-                </NavLink>
             </div>
         </div>
     </div>

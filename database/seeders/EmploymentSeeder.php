@@ -16,8 +16,8 @@ class EmploymentSeeder extends Seeder
         /** @var Employment $employment1 */
         $employment1 = Employment::create([
             'company_name' => 'ONIXT ROBOTICS',
-            'role' => 'Web Developer Jr',
-            'description' => 'Desarrollé y desplegué aplicaciones web utilizando Laravel, abarcando desde la planificación detallada del desarrollo hasta la toma de requerimientos. Adicionalmente, impartí cursos de principios de programación a niños y adolescentes durante los fines de semana.',
+            'role' => 'Jr. Web Developer',
+            'description' => 'I developed and deployed web applications using Laravel, covering everything from detailed development planning to requirements gathering. Additionally, I taught programming principles courses for kids and teens on weekends.',
             'date_init' => '2021-01-21',
             'date_finished' => '2021-07-21',
             'status' => StatusJob::CompletedJob
@@ -26,33 +26,32 @@ class EmploymentSeeder extends Seeder
 
         $employment2 = Employment::create([
             'company_name' => 'Grupo Icarus S.A. de C.V',
-            'role' => 'Desarrollador full stack',
-            'description' => 'Desarrollé aplicaciones web a medida en PHP (legacy y modernas), implementando pasarelas de pago, facturación electrónica mediante API y reportes con JasperReports. Participé en la toma de requerimientos, planificación y desarrollo de user stories con SCRUM. Optimicé sistemas con lógica de negocio, dockerización de entornos y refactorización de procesos. También gestioné y resolví tickets de clientes, asegurando la mejora continua de los proyectos.',
+            'role' => 'Full stack developer',
+            'description' => 'I developed custom web applications in PHP (legacy and modern), implementing payment gateways, electronic invoicing through API and reports with JasperReports. I participated in the requirements gathering, planning and development of user stories with SCRUM. I optimized systems with business logic, dockerization of environments and refactoring of processes. I also managed and resolved customer tickets, ensuring continuous improvement of the projects.',
             'date_init' => '2022-07-18',
             'date_finished' => '2023-11-15',
             'status' => StatusJob::CompletedJob
         ]);
         $employment2->technologies()->attach([2, 3, 6, 7, 9, 11, 13, 14, 15, 17, 18, 19, 20, 22, 27, 31, 34,]);
 
-        $employment3 = Employment::create([
-            'company_name' => 'Junkyard México',
-            'role' => 'Desarrollador Laravel',
-            'description' => 'Participé en el desarrollo de una aplicación CMDB utilizando Laravel, integrando tecnologías como Docker, APIs REST y MySQL. Colaboré en la migración del sistema en producción a su nueva versión, asegurando la compatibilidad y continuidad operativa. Este proyecto presentó el desafío de trabajar con un equipo multicultural, utilizando herramientas como Azure DevOps y Slack, siendo mi primer empleo con una empresa de Estados Unidos, lo que fortaleció mis habilidades técnicas y de colaboración internacional.',
+        $employment2 = Employment::create([
+            'company_name' => 'Junkyard Mexico',
+            'role' => 'Laravel Developer',
+            'description' => 'I participated in the development of a CMDB application using Laravel, integrating technologies such as Docker, REST APIs, and MySQL. I collaborated in the migration of the production system to its new version, ensuring compatibility and operational continuity. This project presented the challenge of working with a multicultural team, using tools such as Azure DevOps and Slack, being my first job with a company in the United States, which strengthened my technical and international collaboration skills.',
             'date_init' => '2023-11-27',
             'date_finished' => '2024-02-29',
             'status' => StatusJob::CompletedJob
         ]);
-        $employment3->technologies()->attach([1, 3, 5, 6, 7, 9, 11, 13, 14, 15, 17, 19, 20, 21, 27, 31, 34,]);
+        $employment2->technologies()->attach([1, 3, 5, 6, 7, 9, 11, 13, 14, 15, 17, 19, 20, 21, 27, 31, 34,]);
 
         $employment4 = Employment::create([
             'company_name' => 'Sahuro Consulting',
-            'role' => 'Desarrollador Full Stack',
-            'description' => 'Brindé consultoría en el desarrollo de aplicaciones web con servicios API REST para una empresa multinacional, utilizando herramientas como Azure DevOps para la gestión de proyectos bajo la metodología Scrum. Participé en la administración de servicios de intranet, integración con SAP y desarrollo de una aplicación móvil en Apache Cordova que se comunicaba con nuestro backend, garantizando una solución integral y eficiente para las necesidades del cliente.',
+            'role' => 'Full Stack Developer',
+            'description' => "I provided consulting in the development of web applications with REST API services for a multinational company, using tools such as Azure DevOps for project management under the Scrum methodology. I participated in the administration of intranet services, integration with SAP and development of a mobile application in Apache Cordova that communicated with our backend, guaranteeing a comprehensive and efficient solution for the client's needs.",
             'date_init' => '2023-11-20',
             'date_finished' => '2024-03-31',
             'status' => StatusJob::CompletedJob
         ]);
         $employment4->technologies()->attach([4, 5, 6, 7, 11, 14, 17, 25, 27, 31]);
-
     }
 }

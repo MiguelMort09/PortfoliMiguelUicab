@@ -4,7 +4,7 @@ import TitleSection from "@/Components/TitleSection.vue";
 
 <template>
     <section class="container-landing-page">
-        <TitleSection>Contact Me</TitleSection>
+        <TitleSection :title="'Contact Me'"/>
     </section>
 </template>
 

@@ -3,30 +3,25 @@ import TitleSection from "@/Components/TitleSection.vue";
 import {onMounted, ref} from "vue";
 
 interface Employee {
+    id: number;
     jobTitle: string;
     companyName: string;
     dates: string;
     description: string;
 }
 
-// Definimos el estado reactivo para empleos
+// Estado reactivo para empleos
 const employments = ref<Employee[]>([]);
-
 const currentIndex = ref<number>(0);
-const employeeSelected = ref<Employee>({
-    jobTitle: '',
-    companyName: '',
-    dates: '',
-    description: ''
-});
+const employeeSelected = ref<Employee | null>(null);
 
+// Establecer empleado seleccionado
 const setEmployee = (index: number) => {
     currentIndex.value = index;
     employeeSelected.value = employments.value[index];
-}
+};
 
-
-// Cargar los datos al montar el componente
+// Cargar datos al montar el componente
 onMounted(async () => {
     const response = await fetch(route('employments.index'));
     const data: Employee[] = await response.json();
@@ -37,28 +32,65 @@ onMounted(async () => {
 });
 </script>
 
+
 <template>
     <section id="experiences" class="py-20 bg-black text-white">
-        <div class="container mx-auto px-4 section-fade-in">
-            <TitleSection>Experiencia Laboral</TitleSection>
+        <div class="container mx-auto px-4">
+            <TitleSection :title="'Experiences'"/>
             <div class="flex flex-col md:flex-row">
+                <!-- Lista de empleos -->
                 <div class="md:w-1/3 mb-8 md:mb-0">
-                    <button v-for="(item, index) in employments" :key="index"
-                            :class="{'w-full bg-gradient-to-r from-black via-slate-950 to-slate-900 ': currentIndex === index}"
-                            class="w-full p-4 mb-2 text-lg uppercase transition-colors font-semibold hover:bg-gradient-to-r hover:from-black hover:via-slate-950 hover:to-slate-900"
-                            v-on:click="setEmployee(index)">
+                    <button
+                        v-for="(item, index) in employments"
+                        :key="index"
+                        v-animateonscroll="{  enterClass: 'animate-zoomin' }"
+                        :class="{'w-full bg-gradient-to-r from-black via-slate-950 to-slate-900 ': currentIndex === index}"
+                        class="w-full p-4 mb-2 text-lg uppercase transition-colors font-semibold hover:bg-gradient-to-r hover:from-black hover:via-slate-950 hover:to-slate-900"
+                        @click="setEmployee(index)"
+                    >
                         {{ item.companyName }}
                     </button>
                 </div>
-                <div class="md:w-2/3 md:pl-8">
-                    <h4 class="text-2xl uppercase font-semibold text-white" v-text="employeeSelected.jobTitle"></h4>
-                    <div class="w-full md:flex md:justify-between">
-                        <p class="text-base md:text-lg text-slate-400" v-text="employeeSelected.companyName"></p>
-                        <p class="text-base md:text-lg text-slate-400 text-right" v-text="employeeSelected.dates"></p>
-                    </div>
-                    <p class="text-gray-100 mt-4 text-justify text-lg" v-text="employeeSelected.description"></p>
+
+                <!-- Contenido con transición -->
+                <div
+                    v-animateonscroll="{  enterClass: 'animate-zoomin ' }"
+                    class="md:w-2/3 md:pl-8 animate-duration-300">
+                    <article
+                        v-if="employeeSelected"
+                        :key="employeeSelected.id"
+                        class="w-full space-y-4 px-8 py-4 animate-duration-300"
+                    >
+                        <h4 class="text-2xl uppercase font-semibold text-white md:text-right text-center">
+                            {{ employeeSelected.jobTitle }}
+                        </h4>
+                        <div class="flex flex-col md:flex-row md:justify-between">
+                            <h3 class="text-slate-400  text-center">{{ employeeSelected.companyName }}</h3>
+                            <h4 class="text-slate-400 md:text-right text-center">{{ employeeSelected.dates }}</h4>
+                        </div>
+                        <p class="text-gray-100 text-center md:text-left">{{ employeeSelected.description }}</p>
+                    </article>
                 </div>
             </div>
         </div>
     </section>
 </template>
+
+<style>
+/* Clase para transiciones */
+.slide-up-enter-active,
+.slide-up-leave-active {
+    transition: all 0.5s ease;
+}
+
+.slide-up-enter-from {
+    transform: translateY(30px);
+    opacity: 0;
+}
+
+.slide-up-leave-to {
+    transform: translateY(-30px);
+    opacity: 0;
+}
+
+</style>

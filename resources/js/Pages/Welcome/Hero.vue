@@ -15,33 +15,38 @@ const profile = "assets/images/IMG_2921.jpg";
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black"></div>
 
         <div class="relative size-full z-20 w-full py-10">
-            <div class="w-full flex justify-center mb-16">
-                <img
-                    :src="profile"
-                    alt="Profile Picture"
-                    class="size-40 md:size-80 rounded-full border-4 border-gray-300 shadow-lg   animate-zoomin  animate-duration-300"/>
-            </div>
-            <div
-                class="sm:px-10 md:max-w-5xl mx-auto px-6  animate-zoomin  animate-duration-300">
-                <!-- Name -->
-                <h1 class="font-extrabold text-2xl sm:text-4xl lg:text-6xl text-white mb-4 tracking-wide">
-                    MIGUEL UICAB -
-                    <span class="text-sky-500">
+            <div class="md:max-w-6xl mx-auto container px-4 md:px-0">
+                <div class="w-full flex items-center">
+                    <div class="w-1/3 justify-center">
+                        <img
+                            :src="profile"
+                            alt="Profile Picture"
+                            class="size-40 md:size-80 rounded-full border-4 border-gray-300 shadow-lg   animate-zoomin  animate-duration-300"/>
+                    </div>
+                    <div
+                        class="w-2/3  animate-zoomin  animate-duration-300">
+                        <!-- Name -->
+                        <h1 class="font-extrabold text-2xl sm:text-4xl lg:text-6xl text-white mb-4 tracking-wide">
+                            MIGUEL UICAB -
+                            <span class="text-sky-500">
                         MORT
                     </span>
-                </h1>
+                        </h1>
 
-                <!-- Description -->
-                <h2 class=" sm:text-lg lg:text-4xl font-bold text-sky-500 mb-6 leading-relaxed">
-                    FULL STACK DEVELOPER
-                </h2>
-                <h3 class=" sm:text-lg lg:text-3xl font-bold text-sky-300 mb-6 leading-relaxed uppercase">
-                    Beyond the lines of code, a vision of the future.
-                </h3>
+                        <!-- Description -->
+                        <h2 class=" sm:text-lg lg:text-4xl font-bold text-sky-500 mb-6 leading-relaxed">
+                            FULL STACK DEVELOPER
+                        </h2>
+                        <h3 class=" sm:text-lg lg:text-3xl font-bold text-sky-300 mb-6 leading-relaxed uppercase">
+                            Beyond the lines of code, a vision of the future.
+                        </h3>
 
-                <!-- Quote -->
+                        <!-- Quote -->
 
+                    </div>
+                </div>
             </div>
+
         </div>
     </section>
 </template>
@@ -58,7 +63,4 @@ const profile = "assets/images/IMG_2921.jpg";
     }
 }
 
-.animate-fade-up {
-    animation: fadeUp 1s ease-out forwards;
-}
-</style>
+

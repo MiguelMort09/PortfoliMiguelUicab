@@ -68,7 +68,9 @@ onMounted(async () => {
                             <h3 class="text-slate-400  text-center">{{ employeeSelected.companyName }}</h3>
                             <h4 class="text-slate-400 md:text-right text-center">{{ employeeSelected.dates }}</h4>
                         </div>
-                        <p class="text-gray-100 text-center md:text-left">{{ employeeSelected.description }}</p>
+                        <p class="text-gray-100 text-center md:text-left md:text-lg">{{
+                                employeeSelected.description
+                            }}</p>
                     </article>
                 </div>
             </div>
@@ -77,20 +79,3 @@ onMounted(async () => {
 </template>
 
 <style>
-/* Clase para transiciones */
-.slide-up-enter-active,
-.slide-up-leave-active {
-    transition: all 0.5s ease;
-}
-
-.slide-up-enter-from {
-    transform: translateY(30px);
-    opacity: 0;
-}
-
-.slide-up-leave-to {
-    transform: translateY(-30px);
-    opacity: 0;
-}
-
-</style>

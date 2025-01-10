@@ -1,27 +1,41 @@
+/* Importing SCSS styles */
 @import "../scss/styles.scss";
 
+/* Tailwind CSS base styles */
 @tailwind base;
+
+/* Tailwind CSS component styles */
 @tailwind components;
+
+/* Tailwind CSS utility styles */
 @tailwind utilities;
+
+/* Setting smooth scroll behavior for the entire HTML document */
 html {
     scroll-behavior: smooth;
 }
 
-/* Personalización del scroll */
+/* Customizing the appearance of the scrollbar */
 ::-webkit-scrollbar {
+    /* Setting the width of the scrollbar */
     width: 8px;
+    /* Ensuring the scrollbar remains stable */
     scrollbar-gutter: stable;
 }
 
 ::-webkit-scrollbar-track {
+    /* Setting the background color of the scrollbar track */
     background: #0f172a; /* slate-950 */
 }
 
 ::-webkit-scrollbar-thumb {
+    /* Setting the background color of the scrollbar thumb */
     background: #1e293b; /* slate-900 */
+    /* Rounding the corners of the scrollbar thumb */
     border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
+    /* Changing the background color of the scrollbar thumb on hover */
     background: #334155; /* slate-800 */
 }

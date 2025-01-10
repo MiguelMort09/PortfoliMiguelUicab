@@ -11,9 +11,7 @@
 @tailwind utilities;
 
 /* Setting smooth scroll behavior for the entire HTML document */
-html {
-    scroll-behavior: smooth;
-}
+
 
 /* Customizing the appearance of the scrollbar */
 ::-webkit-scrollbar {

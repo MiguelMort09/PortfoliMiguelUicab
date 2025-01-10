@@ -63,4 +63,4 @@ const profile = "assets/images/IMG_2921.jpg";
     }
 }
 
-
+</style>

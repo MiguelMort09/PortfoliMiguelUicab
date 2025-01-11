@@ -54,7 +54,8 @@ onMounted(async () => {
                             class="text-center w-12 md:w-24"
                         >
                             <div class="w-full flex flex-col justify-center items-center">
-                                <Avatar :image="skill.icon"
+                                <Avatar :alt="skill.name"
+                                        :image="skill.icon"
                                         shape="circle"
                                         size="xlarge"/>
 

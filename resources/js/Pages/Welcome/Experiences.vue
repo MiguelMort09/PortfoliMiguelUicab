@@ -34,10 +34,10 @@ onMounted(async () => {
 
 
 <template>
-    <section id="experiences" class="py-20 bg-black text-white">
+    <section id="experiences" class="py-10 md:py-20 bg-black text-white">
         <div class="container mx-auto px-4">
             <TitleSection :title="'Experiences'"/>
-            <div class="flex flex-col md:flex-row">
+            <div class="flex flex-col md:flex-row px-2">
                 <div class="md:w-1/3 mb-8 md:mb-0">
                     <button
                         v-for="(item, index) in employments"
@@ -46,7 +46,7 @@ onMounted(async () => {
                         :class="{
                     'w-full bg-gradient-to-r from-black via-slate-950 to-slate-900 ': currentIndex === index
                     }"
-                        class="w-full p-4 mb-2 text-lg uppercase transition-colors font-semibold hover:bg-gradient-to-r hover:from-black hover:via-slate-950 hover:to-slate-900"
+                        class="w-full py-2 md:p-4 mb-2 text-lg uppercase transition-colors font-semibold hover:bg-gradient-to-r hover:from-black hover:via-slate-950 hover:to-slate-900"
                         @click="setEmployee(index)"
                     >
                         {{ item.companyName }}

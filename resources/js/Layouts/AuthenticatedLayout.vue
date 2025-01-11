@@ -56,6 +56,12 @@ const showingNavigationDropdown = ref(false);
                         </div>
 
                         <div class="hidden sm:ms-6 sm:flex sm:items-center">
+                            <NavLink
+                                :active="route().current('welcome')"
+                                :href="route('welcome')"
+                            >
+                                Landing
+                            </NavLink>
                             <!-- Settings Dropdown -->
                             <div class="relative ms-3">
                                 <Dropdown align="right" width="48">

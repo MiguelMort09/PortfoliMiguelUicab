@@ -3,6 +3,9 @@
 This project is a multi-faceted web application designed to showcase my personal portfolio while also providing an admin
 area for managing content. It leverages modern technologies to deliver a seamless user experience on both the frontend
 and backend.
+![img.png](public/images/img_1.png)
+![img_2.png](public/images/img_2.png)
+![img_3.png](public/images/img_3.png)
 
 ## Features
 

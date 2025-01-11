@@ -21,6 +21,13 @@ return new class extends Migration {
             $table->timestamps();
             $table->softDeletes();
         });
+
+        Schema::create('skillables', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('skill_id')->constrained()->onDelete('cascade');
+            $table->morphs('skillable');
+            $table->timestamps();
+        });
     }
 
 

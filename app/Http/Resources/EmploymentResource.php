@@ -14,15 +14,14 @@ class EmploymentResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        $technologies = $this->technologies->select(["name", "icon"]);
 
         return [
+            'id' => $this->id,
             'jobTitle' => $this->role,
             'companyName' => $this->company_name,
-            'status' => $this->status->name,
             'dates' => $this->date_init . ($this->date_finished ? ' - ' . $this->date_finished : 'Actualmente'),
             'description' => $this->description,
-            'technologies' => $technologies,
+
         ];
     }
 }

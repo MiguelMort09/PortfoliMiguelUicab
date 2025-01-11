@@ -19,7 +19,7 @@ const loginWithGoogle = () => {
 };
 
 const submit = () => {
-    form.post(route('register'), {
+    form.post(route('skills.store'), {
         onFinish: () => {
             form.reset('password', 'password_confirmation');
         },

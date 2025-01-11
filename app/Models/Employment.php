@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Enums\StatusJob;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -16,23 +15,15 @@ class Employment extends Model
 
     protected $fillable = [
         'role',
-        'company_name',
-        'status',
+        'description',
         'date_init',
         'date_finished',
-        'description'
+        'company_name'
     ];
 
-    public function technologies(): MorphToMany
+    public function skillable(): MorphToMany
     {
-        return $this->morphToMany(Technology::class, 'technologyable');
-    }
-
-    protected function casts(): array
-    {
-        return [
-            'status' => StatusJob::class,
-        ];
+        return $this->morphToMany(Skill::class, 'skillable');
     }
 
     protected function role(): Attribute

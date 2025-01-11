@@ -19,5 +19,5 @@ export default {
         },
     },
 
-    plugins: [forms, primeUi],
+    plugins: [forms, primeUi, require('@tailwindcss/typography')],
 };

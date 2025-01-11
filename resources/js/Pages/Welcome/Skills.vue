@@ -24,7 +24,7 @@ const setTechnology = (index: number) => {
 
 onMounted(async () => {
     try {
-        const response = await fetch(route("technologies.index"));
+        const response = await fetch(route("api.skills.index"));
         typeTechs.value = await response.json();
         if (typeTechs.value.length) {
             technologies.value = typeTechs.value[0].technologies;

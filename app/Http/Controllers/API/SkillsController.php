@@ -1,17 +1,18 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
 use App\Enums\TypeTechnology;
+use App\Http\Controllers\Controller;
 use App\Http\Resources\TechnologiesResource;
-use App\Models\Technology;
+use App\Models\Skill;
 
-class TechnologiesController extends Controller
+class SkillsController extends Controller
 {
     public function index(): \Illuminate\Http\JsonResponse
     {
         return response()->json(
-            Technology::all()
+            Skill::all()
                 ->groupBy('type')
                 ->map(fn($items, $type) => [
                     'type' => __(TypeTechnology::tryFrom($type)->name),

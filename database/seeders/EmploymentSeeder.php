@@ -22,7 +22,7 @@ class EmploymentSeeder extends Seeder
             'date_finished' => '2021-07-21',
             'status' => StatusJob::CompletedJob
         ]);
-        $employment1->technologies()->attach([31, 19, 21, 27, 29, 14, 9, 15]);
+        $employment1->skillable()->attach([31, 19, 21, 27, 29, 14, 9, 15]);
 
         $employment2 = Employment::create([
             'company_name' => 'Grupo Icarus S.A. de C.V',
@@ -32,7 +32,7 @@ class EmploymentSeeder extends Seeder
             'date_finished' => '2023-11-15',
             'status' => StatusJob::CompletedJob
         ]);
-        $employment2->technologies()->attach([2, 3, 6, 7, 9, 11, 13, 14, 15, 17, 18, 19, 20, 22, 27, 31, 34,]);
+        $employment2->skillable()->attach([2, 3, 6, 7, 9, 11, 13, 14, 15, 17, 18, 19, 20, 22, 27, 31, 34,]);
 
         $employment2 = Employment::create([
             'company_name' => 'Junkyard Mexico',
@@ -42,7 +42,7 @@ class EmploymentSeeder extends Seeder
             'date_finished' => '2024-02-29',
             'status' => StatusJob::CompletedJob
         ]);
-        $employment2->technologies()->attach([1, 3, 5, 6, 7, 9, 11, 13, 14, 15, 17, 19, 20, 21, 27, 31, 34,]);
+        $employment2->skillable()->attach([1, 3, 5, 6, 7, 9, 11, 13, 14, 15, 17, 19, 20, 21, 27, 31, 34,]);
 
         $employment4 = Employment::create([
             'company_name' => 'Sahuro Consulting',
@@ -52,6 +52,6 @@ class EmploymentSeeder extends Seeder
             'date_finished' => '2024-03-31',
             'status' => StatusJob::CompletedJob
         ]);
-        $employment4->technologies()->attach([4, 5, 6, 7, 11, 14, 17, 25, 27, 31]);
+        $employment4->skillable()->attach([4, 5, 6, 7, 11, 14, 17, 25, 27, 31]);
     }
 }

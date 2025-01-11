@@ -1,66 +1,141 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Personal Portfolio Project
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This project is a multi-faceted web application designed to showcase my personal portfolio while also providing an admin
+area for managing content. It leverages modern technologies to deliver a seamless user experience on both the frontend
+and backend.
 
-## About Laravel
+## Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Landing Page
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Responsive Design**: Tailored to look great on all devices, from mobile phones to desktop computers.
+- **Portfolio Showcase**: Highlights my work, including projects, achievements, and skills.
+- **Interactive Elements**: Smooth animations and interactive components for better engagement.
+- **Contact Form**: Easy-to-use form for visitors to reach out.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Admin Area
 
-## Learning Laravel
+- **Content Management**: Manage portfolio items, such as projects and blog posts, directly from the admin panel.
+- **User Management**: Role-based access control for secure admin operations.
+- **Analytics**: Overview of visitor metrics and engagement statistics.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Tech Stack
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Backend
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Laravel**: Robust framework for handling business logic and API endpoints.
+- **Inertia.js**: Combines the backend and frontend seamlessly.
+- **Laravel Sanctum**: Provides secure authentication.
+- **MySQL**: Reliable database for structured data storage.
 
-## Laravel Sponsors
+### Frontend
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- **Vue 3**: Modern JavaScript framework for building interactive UIs.
+- **Tailwind CSS**: Utility-first CSS framework for custom styling.
+- **PrimeVue**: Rich set of UI components for consistent design.
+- **Quill**: WYSIWYG editor for rich text content management.
 
-### Premium Partners
+### DevOps & Tooling
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+- **Vite**: High-performance build tool for faster development.
+- **Typescript**: Ensures type safety and enhances code reliability.
+- **Pint**: Automatically formats code for clean and consistent style.
+- **Prettier**: Ensures consistent formatting in JavaScript and TypeScript files.
 
-## Contributing
+## Installation
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Prerequisites
 
-## Code of Conduct
+- PHP >= 8.2
+- Node.js >= 18.x
+- MySQL >= 8.0
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Steps
 
-## Security Vulnerabilities
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
+   ```
+2. Install backend dependencies:
+   ```bash
+   composer install
+   ```
+3. Install frontend dependencies:
+   ```bash
+   npm install
+   ```
+4. Copy the `.env` file and configure:
+   ```bash
+   cp .env.example .env
+   ```
+5. Generate application key:
+   ```bash
+   php artisan key:generate
+   ```
+6. Run migrations:
+   ```bash
+   php artisan migrate
+   ```
+7. Install and configure Inertia.js:
+    - Install the Inertia.js Vue 3 adapter:
+      ```bash
+      npm install @inertiajs/vue3
+      ```
+    - Update your `app.js` to include Inertia:
+      ```javascript
+      import { createApp, h } from 'vue';
+      import { createInertiaApp } from '@inertiajs/vue3';
+ 
+      createInertiaApp({
+          resolve: name => require(`./Pages/${name}`).default,
+          setup({ el, App, props, plugin }) {
+              createApp({ render: () => h(App, props) })
+                  .use(plugin)
+                  .mount(el);
+          },
+      });
+      ```
+    - Update your Laravel routes to use Inertia:
+      ```php
+      use Inertia\Inertia;
+ 
+      Route::get('/', function () {
+          return Inertia::render('Welcome', [
+              'message' => 'Welcome to my portfolio!',
+          ]);
+      });
+      ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+8. Start the development server:
+   ```bash
+   npm run dev
+   ```
+9. Serve the backend:
+   ```bash
+   php artisan serve
+   ```
+
+## Usage
+
+### Landing Page
+
+Access the landing page at `http://localhost:3000` (if using Vite).
+
+### Admin Area
+
+The admin panel is accessible at `/admin` after login. Use seeded credentials or register a new admin user.
+
+## Future Enhancements
+
+- Add real-time notifications using Laravel Echo and Pusher.js.
+- Expand analytics to include detailed insights on user behavior.
+- Integrate multi-language support with `laravel-lang/common`.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is open-source and available under the MIT license.
+
+---
+Developed by [Your Name](https://your-portfolio-url.com) as part of my personal portfolio.
+

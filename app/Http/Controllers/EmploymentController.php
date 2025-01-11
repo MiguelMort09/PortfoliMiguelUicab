@@ -2,28 +2,28 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\EmploymentResource;
 use App\Models\Employment;
+use Inertia\Inertia;
 
 class EmploymentController extends Controller
 {
     /*
      * Display a listing of the resource.
      */
-    public function index(): array
+    public function index()
     {
-        return EmploymentResource::collection(Employment::all()->sortByDesc("date_finished"))->jsonSerialize();
+        return Inertia::render('Employments/page', [
+            'employments' => Employment::all()
+        ]);
     }
 
-
-    /*
-     * Show the form for creating a new resource.
 
     public function create()
     {
-        //
+        return Inertia::render('Employments/create');
     }
 
+    /*
 
      * Store a newly created resource in storage.
 

@@ -23,7 +23,7 @@ const setEmployee = (index: number) => {
 
 // Cargar datos al montar el componente
 onMounted(async () => {
-    const response = await fetch(route('employments.index'));
+    const response = await fetch(route('api.employments.index'));
     const data: Employee[] = await response.json();
     employments.value = data;
     if (employments.value.length) {

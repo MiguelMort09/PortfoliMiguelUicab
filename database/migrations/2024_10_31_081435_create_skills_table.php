@@ -12,11 +12,13 @@ return new class extends Migration {
     {
         Schema::create('skills', function (Blueprint $table) {
             $table->id();
+
             $table->string('name');
-            $table->integer('level');
-            $table->float('proficiency');
-            $table->boolean('is_technical');
-            $table->integer('type');
+            $table->string('slug')->unique();
+            $table->integer('level', false, true)->nullable();
+            $table->integer('type')->nullable();
+            $table->string('link_icon');
+
             $table->timestamps();
             $table->softDeletes();
         });

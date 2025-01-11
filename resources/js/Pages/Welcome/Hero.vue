@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 const backgroundPolygon = "assets/images/background-polygon.svg";
+import Image from 'primevue/image';
+
 const profile = "assets/images/IMG_2921.jpg";
 </script>
 
@@ -7,10 +9,10 @@ const profile = "assets/images/IMG_2921.jpg";
     <section
         class="relative min-h-screen flex flex-col items-center justify-center text-white overflow-hidden bg-gradient-to-b from-slate-950 via-slate-950 to-black  py-10">
         <!-- Background Image -->
-        <img
+        <Image
             :src="backgroundPolygon"
             alt="Background"
-            class="absolute inset-0 h-full w-full min-h-screen object-cover opacity-30 animate-zoomin animate-duration-300">
+            class="absolute inset-0 h-full w-full min-h-screen object-cover opacity-30 animate-zoomin animate-duration-100"/>
 
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black"></div>
 
@@ -18,10 +20,11 @@ const profile = "assets/images/IMG_2921.jpg";
             <div class="md:max-w-6xl mx-auto container px-4 md:px-0">
                 <div class="w-full flex items-center">
                     <div class="w-1/3 justify-center">
-                        <img
+                        <Image
                             :src="profile"
                             alt="Profile Picture"
-                            class="size-40 md:size-80 rounded-full border-4 border-gray-300 shadow-lg   animate-zoomin  animate-duration-300"/>
+                            image-class="  size-40 md:size-80 rounded-full border-4 border-gray-300 shadow-lg animate-zoomin animate-duration-300"
+                        />
                     </div>
                     <div
                         class="w-2/3  animate-zoomin  animate-duration-300">
@@ -52,15 +55,4 @@ const profile = "assets/images/IMG_2921.jpg";
 </template>
 
 <style>
-@keyframes fadeUp {
-    0% {
-        opacity: 0;
-        transform: translateY(1rem);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 </style>

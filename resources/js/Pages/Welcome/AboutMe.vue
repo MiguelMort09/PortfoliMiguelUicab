@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import TitleSection from "@/Components/TitleSection.vue";
+import Image from "primevue/image";
 
 const profileImageUrl = "assets/images/IMG_6430.PNG";
 </script>
@@ -10,11 +11,11 @@ const profileImageUrl = "assets/images/IMG_6430.PNG";
             <TitleSection :title="'About Me'"/>
             <div class="flex flex-col md:flex-row items-center md:items-start gap-12">
                 <div class=" md:w-1/3 ">
-                    <img
+                    <Image
                         v-animateonscroll="{  enterClass: 'animate-zoomin' }"
                         :src="profileImageUrl"
                         alt="Miguel Uicab"
-                        class="rounded-full shadow-lg w-full shadow-lg justify-center items-center animate-duration-300"
+                        image-class="rounded-full shadow-lg w-full shadow-lg justify-center items-center animate-duration-300"
                     />
                 </div>
                 <div v-animateonscroll="{  enterClass: 'animate-zoomin' }"

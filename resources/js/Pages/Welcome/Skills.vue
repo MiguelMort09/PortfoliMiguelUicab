@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import {onMounted, ref} from "vue";
 import TitleSection from "@/Components/TitleSection.vue";
+import Avatar from "primevue/avatar";
 
 interface TypeTech {
     type: string;
@@ -48,16 +49,14 @@ onMounted(async () => {
                         class="w-full h-full mx-auto grid grid-cols-3 md:grid-cols-6 gap-4 justify-center items-center animate-duration-300"
                     >
                         <li
-                            v-for="(skill, idx) in technologies"
-                            :key="idx"
-                            :class="`text-center w-12 md:w-24 group-${Math.floor(idx / 3)}`"
+                            v-for="(skill, index) in technologies"
+                            :key="index"
+                            class="text-center w-12 md:w-24"
                         >
                             <div class="w-full flex flex-col justify-center items-center">
-                                <img
-                                    :alt="skill.name"
-                                    :src="skill.icon"
-                                    class="w-10 md:w-20 p-1 sm:p-2 lg:p-3 object-cover rounded-full shadow-lg border border-gray-600 bg-gradient-to-b from-slate-900 via-black to-slate-900 transition-transform transform hover:scale-110 duration-300"
-                                />
+                                <Avatar :image="skill.icon"
+                                        shape="circle"
+                                        size="xlarge"/>
 
                                 <h4 class="mt-4 text-sm font-medium text-gray-300 transition-colors duration-300">
                                     {{ skill.name }}
@@ -80,5 +79,3 @@ onMounted(async () => {
         </div>
     </section>
 </template>
-
-<style scoped></style>

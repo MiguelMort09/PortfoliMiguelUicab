@@ -45,9 +45,3 @@
         </div>
     </footer>
 </template>
-
-<style scoped>
-.container-landing-page {
-    @apply w-full px-4 mx-auto lg:max-w-6xl content-center;
-}
-</style>

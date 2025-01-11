@@ -30,6 +30,7 @@
         "primeicons": "^7.0.0",
         "primevue": "^4.2.5",
         "quill": "^2.0.3",
-        "tailwindcss-primeui": "^0.3.4"
+        "tailwindcss-primeui": "^0.3.4",
+        "vue-lazyload": "^3.0.0"
     }
 }

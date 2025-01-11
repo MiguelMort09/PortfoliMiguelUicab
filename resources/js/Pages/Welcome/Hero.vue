@@ -12,22 +12,22 @@ const profile = "assets/images/IMG_2921.jpg";
         <Image
             :src="backgroundPolygon"
             alt="Background"
-            image-class="absolute inset-0 md:min-h-screen w-auto object-cover opacity-30 animate-zoomin animate-duration-100"/>
+            image-class="absolute inset-0 min-h-screen w-auto object-cover opacity-30 animate-zoomin animate-duration-100"/>
 
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black"></div>
 
         <div class="relative size-full z-20 w-full py-10">
-            <div class="md:max-w-6xl mx-auto container px-4 md:px-0">
-                <div class="w-full flex items-center">
-                    <div class="w-1/3 justify-center">
+            <div class="w-full md:max-w-6xl mx-auto container px-4 md:px-8 ">
+                <div class="w-full flex flex-col lg:flex-row items-center gap-4">
+                    <div class="md:w-1/3 mb-10 lg:mb-0 justify-center">
                         <Image
                             :src="profile"
                             alt="Profile Picture"
-                            image-class="size-40 md:size-80 rounded-full border-4 border-gray-300 shadow-lg animate-zoomin animate-duration-300"
+                            image-class="size-40 md:size-60 lg:size-80 rounded-full border-4 border-gray-300 shadow-lg animate-zoomin animate-duration-300"
                         />
                     </div>
                     <div
-                        class="w-2/3  animate-zoomin  animate-duration-300">
+                        class="md:w-2/3  animate-zoomin  animate-duration-300 px-2">
                         <!-- Name -->
                         <h1 class="font-extrabold text-2xl sm:text-4xl lg:text-6xl text-white mb-4 tracking-wide">
                             MIGUEL UICAB -

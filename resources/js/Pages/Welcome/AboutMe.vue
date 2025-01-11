@@ -7,19 +7,19 @@ const profileImageUrl = "assets/images/IMG_6430.PNG";
 
 <template>
     <section id="about" class="py-20 bg-gradient-to-b from-black to-slate-950 text-white">
-        <div class="container mx-auto px-4">
+        <div class="md:container mx-auto px-4">
             <TitleSection :title="'About Me'"/>
-            <div class="flex flex-col md:flex-row items-center md:items-start gap-12">
-                <div class=" md:w-1/3 ">
+            <div class="w-full flex flex-col lg:flex-row justify-center items-center lg:items-start gap-4">
+                <div class="lg:w-1/3 mb-6 lg:mb-0 justify-center">
                     <Image
-                        v-animateonscroll="{  enterClass: 'animate-zoomin' }"
                         :src="profileImageUrl"
-                        alt="Miguel Uicab"
-                        image-class="rounded-full shadow-lg w-full shadow-lg justify-center items-center animate-duration-300"
+                        alt="Profile Picture"
+                        image-class="size-40 md:size-60 lg:size-80 rounded-full border-4 border-gray-300 shadow-lg animate-zoomin animate-duration-300"
                     />
                 </div>
+
                 <div v-animateonscroll="{  enterClass: 'animate-zoomin' }"
-                     class="md:w-2/3  animate-duration-300">
+                     class="w-full lg:w-2/3 animate-duration-300 px-2">
                     <div class="mb-8">
                         <h3 class="text-2xl font-semibold mb-4 flex items-center">
                             Personal Info

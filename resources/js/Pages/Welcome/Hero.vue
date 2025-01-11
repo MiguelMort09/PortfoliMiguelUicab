@@ -12,7 +12,7 @@ const profile = "assets/images/IMG_2921.jpg";
         <Image
             :src="backgroundPolygon"
             alt="Background"
-            class="absolute inset-0 w-full md:min-h-screen object-cover opacity-30 animate-zoomin animate-duration-100"/>
+            image-class="absolute inset-0 md:min-h-screen w-auto object-cover opacity-30 animate-zoomin animate-duration-100"/>
 
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black"></div>
 

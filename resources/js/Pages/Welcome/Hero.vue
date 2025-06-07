@@ -1,6 +1,6 @@
 <script setup lang="ts">
-const backgroundPolygon = "/placeholder.svg?height=1080&width=1920";
-const profile = "/placeholder.svg?height=400&width=400";
+const backgroundPolygon = "assets/images/background-polygon.svg";
+const profile =  "assets/images/IMG-1.jpg";
 </script>
 
 <template>

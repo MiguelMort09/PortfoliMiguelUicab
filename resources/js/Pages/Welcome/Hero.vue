@@ -2,7 +2,7 @@
 const backgroundPolygon = "assets/images/background-polygon.svg";
 import Image from 'primevue/image';
 
-const profile = "assets/images/IMG_2921.jpg";
+const profile = "assets/images/IMG-1.jpg";
 </script>
 
 <template>

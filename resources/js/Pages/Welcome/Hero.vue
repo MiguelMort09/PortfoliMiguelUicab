@@ -53,16 +53,6 @@ const profile =  "assets/images/IMG-1.jpg";
             <h3 class="sm:text-lg lg:text-3xl font-bold text-sky-300 mb-6 leading-relaxed uppercase">
               Beyond the lines of code, a vision of the future.
             </h3>
-
-            <!-- Optional: Add some action buttons -->
-            <div class="flex flex-col sm:flex-row gap-4 mt-8">
-              <button class="px-6 py-3 bg-sky-500 hover:bg-sky-600 text-white font-semibold rounded-lg transition-colors duration-300">
-                View Portfolio
-              </button>
-              <button class="px-6 py-3 border-2 border-sky-500 text-sky-500 hover:bg-sky-500 hover:text-white font-semibold rounded-lg transition-all duration-300">
-                Contact Me
-              </button>
-            </div>
           </div>
         </div>
       </div>

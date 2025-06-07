@@ -23,7 +23,7 @@ const profile = "assets/images/IMG-1.jpg";
                         <Image
                             :src="profile"
                             alt="Profile Picture"
-                            image-class="size-40 md:size-60 lg:size-80 rounded-full border-4 border-gray-300 shadow-lg animate-zoomin animate-duration-300"
+                            image-class="h-40 md:h-60 lg:h-80 object-cover rounded-full border-4 border-gray-300 shadow-lg animate-zoomin animate-duration-300"
                         />
                     </div>
                     <div

@@ -7,6 +7,8 @@ services:
         secrets:
             - production_key
             - production_env
+        ports:
+            - "80:80"
 secrets:
     production_env:
         file: /etc/secrets/portfolio/production/.env.production.encrypted

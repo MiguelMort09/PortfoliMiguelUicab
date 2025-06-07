@@ -1,0 +1,16 @@
+services:
+    production:
+        container_name: portfolio
+        image: portfolio
+        environment:
+            APP_ENV: production
+        secrets:
+            - production_key
+            - production_env
+        ports:
+            - "80:80"
+secrets:
+    production_env:
+        file: /etc/secrets/portfolio/production/.env.production.encrypted
+    production_key:
+        file: /etc/secrets/portfolio/production/.env.production.key

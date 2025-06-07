@@ -1,0 +1,1 @@
+* * * * * www-data cd /var/www && /usr/local/bin/php artisan schedule:run >> /var/log/cron/output.log 2>> /var/log/cron/errors.log
